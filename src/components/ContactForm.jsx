@@ -3,15 +3,16 @@ import { FaPaperPlane } from "react-icons/fa6";
 const ContactForm = () => {
   return (
     <form
-        className='z-40 flex flex-col gap-6 justify-center items-start bg-[#00171F] text-white font-lexend p-8 max-sm:mx-auto w-[90%] min[528px]:w-[450px]'
+        className='z-40 flex flex-col gap-4 sm:gap-6 justify-center items-start bg-[#00171F] text-white font-lexend p-6 sm:p-8 max-sm:mx-auto w-[90%] max-[1023px]:max-w-[600px] min-[1023px]:w-[550px]'
     >
-        <h2 className='font-lexendMega text-3xl font-semibold'>Kontaktní<br/>formulář</h2>
+        <h2 className='font-lexendMega text-xl sm:text-3xl font-semibold'>Kontaktní<br/>formulář</h2>
 
         <input 
             type="text" 
             placeholder='Jméno a příjmení *' 
             className='
             text-white 
+            max-sm:text-sm
             py-3 
             border-b 
             border-b-white 
@@ -28,6 +29,7 @@ const ContactForm = () => {
             placeholder='E-mail *' 
             className='
             text-white 
+            max-sm:text-sm
             py-3 
             border-b 
             border-b-white 
@@ -44,6 +46,7 @@ const ContactForm = () => {
             placeholder='Telefon' 
             className='
             text-white 
+            max-sm:text-sm
             py-3 
             border-b 
             border-b-white 
@@ -60,6 +63,7 @@ const ContactForm = () => {
             placeholder='Typ focení' 
             className='
             text-white 
+            max-sm:text-sm
             py-3 
             border-b 
             border-b-white 
@@ -75,7 +79,8 @@ const ContactForm = () => {
             placeholder='Poznámka' 
             rows={4}
             className='
-            text-white 
+            text-white
+            max-sm:text-sm
             py-3 
             border-b 
             border-b-white 
@@ -88,7 +93,7 @@ const ContactForm = () => {
             onChange={() => {}}
         />
 
-        <button className="mt-2 flex justify-center items-center gap-2 ml-auto py-2 px-6 rounded-full bg-white text-black hover:scale-105 transition-transform duration-300 cursor-pointer">
+        <button className="mt-2 max-sm:text-sm flex justify-center items-center gap-2 ml-auto py-2 px-6 rounded-full bg-white text-black hover:scale-105 transition-transform duration-300 cursor-pointer">
             <span>Odeslat</span>
             <FaPaperPlane />
         </button>

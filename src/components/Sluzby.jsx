@@ -41,9 +41,9 @@ const data = [
 
 const Sluzby = () => {
   return (
-    <section className="bg-[#111111] min-h-[300px] w-full py-20 relative flex justify-center z-100">
+    <section id="services" className="bg-[#111111] min-h-[300px] w-full max-sm:py-14 py-20 relative flex justify-center z-100">
       
-      <div className="lg:absolute lg:bottom-[-100px] w-[80%] gap-4 sm:gap-0 sm:w-[70%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="lg:absolute lg:bottom-[-70px] gap-6 sm:gap-4 lg:gap-0 w-[90%] md:w-[80%] lg:w[70%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {data.map(({ id, title, text, imageUrl }) => (
           <div 
             key={id}

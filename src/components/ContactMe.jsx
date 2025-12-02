@@ -4,7 +4,7 @@ import { FaFacebook, FaInstagram, FaPhone, FaEnvelope } from "react-icons/fa6";
 
 const ContactMe = () => {
   return (
-    <div className="relative py-14 flex flex-col lg:flex-row justify-center items-center gap-10 overflow-hidden">
+    <div id="contact" className="relative py-14 flex flex-col lg:flex-row justify-center items-center gap-10 overflow-hidden">
 
       {/* BACKGROUND IMAGE */}
       <img 
@@ -13,18 +13,16 @@ const ContactMe = () => {
       />
 
       {/* FORM */}
-      <div className="w-[90%] max-w-[450px] lg:w-[450px]">
-        <ContactForm />
-      </div>
+      <ContactForm />
 
       {/* CONTACT INFO CARD */}
       <div className="z-40 bg-white px-8 py-10 md:px-10 md:py-14 
-                      w-[90%] max-w-[550px] lg:w-[550px] 
-                      flex flex-col gap-6 font-lexend font-medium">
+                      w-[90%] max-[1023px]:max-w-[600px] lg:w-[550px] 
+                      flex flex-col max-sm:gap-4 gap-6 font-lexend font-medium">
 
         {/* HEADING */}
-        <div className="pl-2 border-l-4 border-black mb-1 flex flex-col justify-center font-lexendMega 
-                        text-xl md:text-2xl font-medium items-start">
+        <div className="pl-2 border-l-4 max-sm:border-l-2 border-black mb-1 flex flex-col justify-center font-lexendMega 
+        max-sm:text-lg text-xl md:text-2xl font-medium items-start">
           <h1>Fotograf</h1>
           <h2>Vojtěch Vahala</h2>
         </div>

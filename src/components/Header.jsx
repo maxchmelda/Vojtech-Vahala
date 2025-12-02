@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import arrowDown from '../assets/header-arrow-down.svg';
 
 const Header = () => {
@@ -33,7 +34,8 @@ const Header = () => {
           md:mb-[120px]
         "
       >
-        <button
+        <Link
+          to="/gallery"
           className="
             bg-linear-to-r 
             from-black 
@@ -56,7 +58,7 @@ const Header = () => {
           "
         >
           Prohlédnout portfolio
-        </button>
+        </Link>
 
         <img
           src={arrowDown}
