@@ -1,5 +1,5 @@
 import { FaBars, FaInstagram, FaXmark } from 'react-icons/fa6'
-import navBG from '../assets/nav_bg.svg'
+import navBG from '../assets/nav-bg.svg'
 import { Link } from 'react-router'
 import { useState } from 'react'
 
@@ -8,15 +8,16 @@ const Navbar = () => {
 
     const renderLinks = () => (
         <>
-            <Link to="/" onClick={() => setOpen(false)}>home</Link>
-            <Link to="/" onClick={() => setOpen(false)}>služby</Link>
-            <Link to="/" onClick={() => setOpen(false)}>galerie</Link>
-            <Link to="/" onClick={() => setOpen(false)}>o mně</Link>
-            <Link to="/" onClick={() => setOpen(false)}>kontakt</Link>
+            <Link className='hover:underline underline-offset-3' to="/" onClick={() => setOpen(false)}>home</Link>
+            <Link className='hover:underline underline-offset-3' to="/" onClick={() => setOpen(false)}>služby</Link>
+            <Link className='hover:underline underline-offset-3' to="/" onClick={() => setOpen(false)}>galerie</Link>
+            <Link className='hover:underline underline-offset-3' to="/" onClick={() => setOpen(false)}>o mně</Link>
+            <Link className='hover:underline underline-offset-3' to="/" onClick={() => setOpen(false)}>kontakt</Link>
 
             <a
             href="https://www.instagram.com/vojtech_valhala/"
             target="_blank"
+            className='hover:scale-110 transition-transform'
             onClick={() => setOpen(false)}
             >
             <FaInstagram size={22} />
@@ -36,9 +37,9 @@ const Navbar = () => {
 
             {/* content centered over it */}
             <div className="max-sm:justify-between max-sm:px-2 relative z-20 h-full flex justify-around items-center">
-                <div className=" max-md:text-xs pl-2 border-l-2 mb-1 flex flex-col justify-center font-lexend text-sm font-medium items-start">
+                <div className=" max-md:text-xs pl-2 border-l-2 mb-1 flex flex-col justify-center font-lexendMega text-sm font-medium items-start">
                     <h1>Fotograf</h1>
-                    <h2>Vojtěch Valhala</h2>
+                    <h2>Vojtěch Vahala</h2>
                 </div>
 
                 <div className="max-[1150px]:hidden flex justify-center mb-1 items-center gap-8 text-white">
