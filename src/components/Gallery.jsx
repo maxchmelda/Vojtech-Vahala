@@ -4,6 +4,7 @@ import "keen-slider/keen-slider.min.css";
 import "../carousel.css";
 import { useWindowSize } from "react-use";
 import axios from "axios";
+import CircularProgress from '@mui/material/CircularProgress';
 
 export default function Gallery() {
   const { width } = useWindowSize();
@@ -58,7 +59,9 @@ export default function Gallery() {
           <>
             {[1, 2, 3].map((i) => (
               <div className="keen-slider__slide skeleton-slide" key={i}>
-                <div className="skeleton-box" />
+                <div className="skeleton-box" >
+                  <CircularProgress color="gray" />
+                </div>
               </div>
             ))}
           </> 
