@@ -8,7 +8,7 @@ const PageLoader = () => {
       exit={{ y: "-100%", opacity: 1 }}
       transition={{ duration: 0.9, ease: [0.77, 0, 0.18, 1] }}
       className="
-        fixed inset-0 z-[9999]
+        fixed inset-0 z-9999
         bg-[#00171F]
         flex flex-col items-center justify-center
         overflow-hidden
