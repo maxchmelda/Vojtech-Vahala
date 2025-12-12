@@ -25,7 +25,7 @@ export default function Layout() {
   const [pageReady, setPageReady] = useState(false)
 
   useEffect(() => {
-    const MIN_DURATION = 3000
+    const MIN_DURATION = 1500
     const start = Date.now()
 
     const finish = () => {
