@@ -4,6 +4,7 @@ import "keen-slider/keen-slider.min.css"
 import axios from "axios"
 import AlbumModal from "./AlbumModal"
 import { LinearProgress } from "@mui/material"
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
 const PLACEHOLDER =
   "https://join.travelmanagers.com.au/wp-content/uploads/2017/09/default-placeholder-300x300.png"
@@ -111,7 +112,7 @@ export default function AlbumSlider() {
       )}
 
       {/* slider */}
-      <div className="w-full max-w-[1100px] mx-auto px-6 overflow-hidden">
+      <div className="w-full max-w-[1100px] mx-auto lg:px-6 overflow-hidden">
         {isLoading ? (
           <div className="w-full flex items-center justify-center pt-6">
             <div className="w-[60%] sm:w-[40%] lg:w-[30%] text-gray-400">
@@ -169,7 +170,7 @@ export default function AlbumSlider() {
                            disabled:opacity-40 disabled:cursor-not-allowed
                            hover:scale-105 transition"
               >
-                ‹
+                <MdKeyboardArrowLeft size={24} />
               </button>
 
               <span className="text-sm font-semibold text-neutral-300">
@@ -188,7 +189,7 @@ export default function AlbumSlider() {
                            disabled:opacity-40 disabled:cursor-not-allowed
                            hover:scale-105 transition"
               >
-                ›
+                <MdKeyboardArrowRight size={24} />
               </button>
             </div>
           ) : (
