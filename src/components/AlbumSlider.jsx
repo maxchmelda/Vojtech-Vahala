@@ -132,7 +132,7 @@ export default function AlbumSlider() {
                     <div
                       key={album.name}
                       onClick={() => setOpenedAlbum(album)}
-                      className="relative w-full aspect-[4/3]
+                      className="relative w-full aspect-4/3
                                 overflow-hidden cursor-pointer group"
                     >
                       <img
