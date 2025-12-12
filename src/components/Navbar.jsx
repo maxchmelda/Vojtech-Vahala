@@ -57,10 +57,10 @@ const Navbar = () => {
                 />
 
                 <div className="max-sm:justify-between max-sm:px-2 relative z-20 h-full flex justify-around items-center">
-                    <div className="max-md:text-xs pl-2 border-l-2 mb-1 flex flex-col justify-center font-lexendMega text-sm font-medium items-start">
+                    <Link to="/" className="cursor-pointer max-md:text-xs pl-2 border-l-2 mb-1 flex flex-col justify-center font-lexendMega text-sm font-medium items-start">
                         <h1>Fotograf</h1>
                         <h2>Vojtěch Vahala</h2>
-                    </div>
+                    </Link>
 
                     <div className="max-[1150px]:hidden flex justify-center mb-1 items-center gap-8 text-white">
                         {renderLinks()}
