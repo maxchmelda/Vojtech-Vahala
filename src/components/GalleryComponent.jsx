@@ -4,6 +4,7 @@ import AlbumSlider from "./AlbumSlider"
 const GalleryComponent = () => {
   return (
     <div
+      id="gallery"
       className="
         w-full bg-[#212121] min-h-[200px]
         flex flex-col items-center
