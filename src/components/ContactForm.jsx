@@ -141,6 +141,7 @@ const ContactForm = () => {
           bg-white text-black
           hover:scale-105 transition-transform duration-300
           disabled:opacity-50 disabled:cursor-not-allowed
+          cursor-pointer
         "
       >
         <span>{isSending ? "Odesílám…" : "Odeslat"}</span>

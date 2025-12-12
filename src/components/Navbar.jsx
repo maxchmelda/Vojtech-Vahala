@@ -12,32 +12,32 @@ const Navbar = () => {
     const renderLinks = () => (
         <>
             <Link to="/" onClick={closeMenu}
-                className='hover:underline underline-offset-3'>
+                className='hover:underline underline-offset-3 max-[1150px]:w-full'>
                 home
             </Link>
 
             <HashLink smooth to="/#services" onClick={closeMenu}
-                className='hover:underline underline-offset-3'>
+                className='hover:underline underline-offset-3 max-[1150px]:w-full'>
                 služby
             </HashLink>
 
             <Link to="/gallery" onClick={closeMenu}
-                className='hover:underline underline-offset-3'>
+                className='hover:underline underline-offset-3 max-[1150px]:w-full'>
                 galerie
             </Link>
 
             <HashLink smooth to="/#about" onClick={closeMenu}
-                className='hover:underline underline-offset-3'>
+                className='hover:underline underline-offset-3 max-[1150px]:w-full'>
                 o mně
             </HashLink>
 
             <HashLink smooth to="/#contact" onClick={closeMenu}
-                className='hover:underline underline-offset-3'>
+                className='hover:underline underline-offset-3 max-[1150px]:w-full'>
                 kontakt
             </HashLink>
 
             <a
-                href="https://www.instagram.com/vojtech_valhala/"
+                href="https://www.instagram.com/vahyn_/"
                 target="_blank"
                 className='hover:scale-110 transition-transform'
                 onClick={closeMenu}
@@ -67,7 +67,7 @@ const Navbar = () => {
                     </div>
 
                     <button
-                        className="hidden max-[1150px]:flex text-white text-2xl"
+                        className="hidden  max-[1150px]:flex text-white text-2xl"
                         onClick={() => setOpen(!open)}
                     >
                         {open ? <FaXmark /> : <FaBars />}
@@ -76,7 +76,7 @@ const Navbar = () => {
             </nav>
 
             {open && (
-                <div className="absolute top-18.5 max-sm:top-14 right-0 max-sm:w-[60%] w-[50%] max-w-[300px] bg-[#00171F] backdrop-blur-md text-white flex flex-col items-start gap-6 py-6 px-6 z-10 font-lexend max-md:text-xs text-sm shadow-xl">
+                <div className="absolute top-18.5 max-sm:top-[59px] min-[1150px]:hidden right-0 max-sm:w-[60%] w-[50%] max-w-[300px] bg-[#00171F] backdrop-blur-md text-white flex flex-col items-start gap-6 py-6 px-6 z-50 font-lexend max-md:text-xs text-sm shadow-xl">
                     {renderLinks()}
                 </div>
             )}
