@@ -54,7 +54,7 @@ export default function AlbumModal({ album, onClose }) {
               loading="lazy"
               onClick={() => window.open(url, "_blank")}
               className="
-                w-full h-full object-cover rounded-xl cursor-pointer
+                w-full h-full object-cover cursor-pointer
                 transition-transform duration-200
                 hover:scale-[1.03]
               "

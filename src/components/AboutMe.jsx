@@ -2,8 +2,14 @@ import { HashLink } from "react-router-hash-link"
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
 
-const text =
-  "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc auctor. In rutrum. Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus. Nulla non lectus sed nisl molestie malesuada. Quisque porta. Fusce nibh. Mauris tincidunt sem sed arcu. Integer tempor. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+const text = `
+  Jmenuji se Vojtěch Vahala a zaměřuji se na fotografii, která zachycuje přirozené
+  emoce a autentické okamžiky. Každé focení beru individuálně a dbám na to, aby se
+  lidé před objektivem cítili uvolněně a sami sebou.
+
+  Fotím svatby, portréty, firemní focení i akce. Působím v Brně a na jižní Moravě,
+  ale za zajímavými projekty rád přijedu kamkoliv.
+`;
 
 const AboutMe = () => {
   const ref = useRef(null)
@@ -60,7 +66,7 @@ const AboutMe = () => {
               Kontaktujte mě
             </HashLink>
 
-            <button className="max-[407px]:w-[168px] text-center py-2 px-6 rounded-full bg-[#BC0101] text-white hover:scale-105 transition-transform duration-300">
+            <button className="cursor-pointer max-[407px]:w-[168px] text-center py-2 px-6 rounded-full bg-[#BC0101] text-white hover:scale-105 transition-transform duration-300">
               Ceník služeb
             </button>
           </motion.div>
@@ -71,7 +77,7 @@ const AboutMe = () => {
       <img
         className="w-full lg:w-1/2 h-[300px] sm:h-[400px] lg:h-auto object-cover"
         src="/about-pic.png"
-        alt="about"
+        alt="about me image"
       />
     </div>
   )

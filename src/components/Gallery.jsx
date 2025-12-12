@@ -53,7 +53,7 @@ export default function Gallery() {
       <div ref={sliderRef} className="keen-slider">
         {imageUrls.length > 0 ? (
           imageUrls.map((url, idx) => (
-            <img className="keen-slider__slide" src={url} key={idx} />
+            <img className="keen-slider__slide" alt="slider image" src={url} key={idx} />
           ))
         ) : (
           <>

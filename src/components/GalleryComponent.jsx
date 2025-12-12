@@ -33,7 +33,7 @@ const GalleryComponent = () => {
       </span>
 
       {/* title */}
-      <h1
+      <h2
         className="
           text-white font-lexendMega
           text-2xl sm:text-3xl md:text-4xl
@@ -41,7 +41,7 @@ const GalleryComponent = () => {
         "
       >
         Galerie
-      </h1>
+      </h2>
 
       {/* description */}
       <p

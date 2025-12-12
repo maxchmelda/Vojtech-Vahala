@@ -2,8 +2,15 @@ import { HashLink } from "react-router-hash-link"
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
 
-const text =
-  "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc auctor. In rutrum. Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus. Nulla non lectus sed nisl molestie malesuada. Quisque porta. Fusce nibh. Mauris tincidunt sem sed arcu. Integer tempor. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+const text =`
+  Moravské hody pro mě nejsou jen událostí, ale živou tradicí plnou barev,
+  emocí a silných momentů. Baví mě zachycovat atmosféru krojů, tance,
+  hudby i radosti lidí, kteří tuto tradici udržují při životě.
+
+  Fotografováním hodů se snažím uchovat jejich jedinečný charakter a
+  přirozenou energii tak, aby fotografie vyprávěly příběh i dlouho
+  po skončení samotné akce.
+`;
 
 const Hody = () => {
   const ref = useRef(null)
@@ -53,7 +60,7 @@ const Hody = () => {
           >
             <HashLink
               to="/gallery#gallery"
-              className="max-sm:text-sm py-2 px-6 rounded-full bg-white text-black hover:scale-105 transition-transform duration-300 cursor-pointer"
+              className="max-sm:text-sm py-2 px-6 inline-block rounded-full bg-white text-black hover:scale-105 transition-transform duration-300 cursor-pointer"
             >
               Zobrazit v galerii
             </HashLink>

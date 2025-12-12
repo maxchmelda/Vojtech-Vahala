@@ -42,7 +42,7 @@ const ContactMe = () => {
       {/* BACKGROUND IMAGE */}
       <motion.img
         src="contact-bg.png"
-        alt=""
+        alt="background image contact section"
         style={{ y: bgY }}
         className="
           absolute inset-0
@@ -77,7 +77,7 @@ const ContactMe = () => {
             text-xl md:text-2xl
           "
         >
-          <h1>Fotograf</h1>
+          <h2>Fotograf</h2>
           <h2>Vojtěch Vahala</h2>
         </div>
 
