@@ -41,8 +41,8 @@ const data = [
 
 const Sluzby = () => {
   return (
-    <section id="services" className="bg-[#111111] min-h-[300px] w-full max-sm:py-14 py-20 relative flex justify-center z-100">
-      
+    <section id="services" className="bg-[#111111] min-h-[300px] w-full max-sm:py-10 py-20 relative flex flex-col gap-8 items-center justify-center z-100">
+      <h2 className='text-white font-lexendMega text-2xl font-semibold lg:hidden'>Služby</h2>
       <div className="lg:absolute lg:bottom-[-70px] gap-6 sm:gap-4 lg:gap-0 w-[90%] md:w-[80%] lg:w[70%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {data.map(({ id, title, text, imageUrl }) => (
           <div 

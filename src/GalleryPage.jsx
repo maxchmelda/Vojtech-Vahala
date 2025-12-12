@@ -1,8 +1,12 @@
-import React from 'react'
+import ContactMe from "./components/ContactMe"
+import GalleryComponent from "./components/GalleryComponent"
 
 const GalleryPage = () => {
   return (
-    <div>GalleryPage</div>
+    <>
+      <GalleryComponent />
+      <ContactMe />
+    </>
   )
 }
 

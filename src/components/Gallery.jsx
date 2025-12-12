@@ -59,8 +59,8 @@ export default function Gallery() {
           <>
             {[1, 2, 3].map((i) => (
               <div className="keen-slider__slide skeleton-slide" key={i}>
-                <div className="skeleton-box" >
-                  <CircularProgress color="gray" />
+                <div className="skeleton-box text-gray-500">
+                  <CircularProgress color="inherit" />
                 </div>
               </div>
             ))}
@@ -69,7 +69,7 @@ export default function Gallery() {
         )}
       </div>
 
-      {sliderLoaded && instanceRef.current?.track?.details?.slides && (
+      {sliderLoaded && instanceRef.current?.track?.details?.slides && imageUrls.length > 0 && (
         <>
           <Arrow
             left
