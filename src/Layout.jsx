@@ -51,7 +51,7 @@ export default function Layout() {
   }, [])
 
   return (
-    <>
+    <div className="max-w-[2000px] mx-auto">
       <AnimatePresence>
         {showLoader && <PageLoader />}
       </AnimatePresence>
@@ -59,6 +59,6 @@ export default function Layout() {
       <Navbar />
       <Outlet />
       <Footer />
-    </>
+    </div>
   )
 }
