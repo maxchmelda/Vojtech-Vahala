@@ -1,5 +1,6 @@
 import ContactMe from "./components/ContactMe"
 import GalleryComponent from "./components/GalleryComponent"
+import { Helmet } from "react-helmet"
 
 const GalleryPage = () => {
   return (
