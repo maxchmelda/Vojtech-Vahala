@@ -40,6 +40,15 @@ const data = [
   },
 ]
 
+const orderClasses = [
+  "order-1",
+  "order-2",
+  "order-3 sm:order-4 lg:order-3",
+  "order-4 sm:order-3 lg:order-4",
+  "order-5",
+  "order-6",
+]
+
 const Sluzby = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
@@ -74,7 +83,7 @@ const Sluzby = () => {
               ease: "easeOut",
               delay: index * 0.08,
             }}
-            className="relative group overflow-hidden h-[180px] sm:h-40 z-50"
+            className={`relative group overflow-hidden h-[180px] sm:h-40 z-50 ${orderClasses[index]}`}
           >
             {/* IMAGE */}
             <img
