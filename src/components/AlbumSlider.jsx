@@ -148,7 +148,7 @@ export default function AlbumSlider() {
                                       bg-black/85 text-white py-2 px-4
                                       opacity-0 group-hover:opacity-100 
                                       transition-opacity duration-300 pointer-events-none">
-                        <span className="text-sm font-medium truncate block font-lexend">
+                        <span className="text-sm font-medium truncate block font-lexend text-overflow:ellipsis">
                           {album.name}
                         </span>
                       </div>
