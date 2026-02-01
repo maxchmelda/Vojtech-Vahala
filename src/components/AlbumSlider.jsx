@@ -134,7 +134,7 @@ export default function AlbumSlider() {
                       key={album.name}
                       onClick={() => setOpenedAlbum(album)}
                       className="relative w-full aspect-4/3
-                                overflow-hidden cursor-pointer group"
+                                overflow-hidden cursor-pointer group" // group je zde důležité
                     >
                       <img
                         src={album.coverImgUrl ?? PLACEHOLDER}
@@ -143,6 +143,16 @@ export default function AlbumSlider() {
                                   transition-transform duration-300
                                   group-hover:scale-[1.06]"
                       />
+                      
+                      <div className="absolute bottom-0 left-0 w-full 
+                                      bg-black/85 text-white py-2 px-4
+                                      opacity-0 group-hover:opacity-100 
+                                      transition-opacity duration-300 pointer-events-none">
+                        <span className="text-sm font-medium truncate block font-lexend">
+                          {album.name}
+                        </span>
+                      </div>
+
                     </div>
                   ))}
                 </div>
