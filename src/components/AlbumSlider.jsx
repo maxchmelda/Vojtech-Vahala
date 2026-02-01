@@ -68,7 +68,7 @@ export default function AlbumSlider() {
     const loadAlbums = async () => {
       try {
         const res = await axios.get(
-          `${import.meta.url.VITE_API_URL}/albums`
+          `${import.meta.env.VITE_API_URL}/albums`
         )
         setAlbums(res.data.albums)
       } catch {

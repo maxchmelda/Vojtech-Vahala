@@ -2,7 +2,7 @@ import { useState } from "react"
 import axios from "axios"
 import { FaPaperPlane } from "react-icons/fa6"
 
-const API_URL = `${import.meta.url.VITE_API_URL}/contact`;
+const API_URL = `${import.meta.env.VITE_API_URL}/contact`;
 
 const ContactForm = () => {
   const [form, setForm] = useState({

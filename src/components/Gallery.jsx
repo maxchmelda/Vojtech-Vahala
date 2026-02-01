@@ -34,7 +34,7 @@ export default function Gallery() {
   useEffect(() => {
     const loadImages = async () => {
       try {
-        const res = await axios.get(`${import.meta.url.VITE_API_URL}/slider`);
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/slider`);
         setImageUrls(res.data);
       } catch (err) {
         console.error("Error loading slider images:", err);

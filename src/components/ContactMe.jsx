@@ -97,12 +97,12 @@ const ContactMe = () => {
 
               <div className="flex items-center gap-2">
                 <FaPhone />
-                <p>+420 123 456 789</p>
+                <a href="tel:+420123456789" className="hover:underline cursor-pointer">+420 123 456 789</a>
               </div>
 
               <div className="flex items-center gap-2">
                 <BsEnvelopeFill />
-                <a href="mailto:email@gmail.com">jmeno.prijmeni@gmail.com</a>
+                <a href="mailto:email@gmail.com" className="hover:underline cursor-pointer">jmeno.prijmeni@gmail.com</a>
               </div>
             </div>
           </div>
@@ -117,24 +117,24 @@ const ContactMe = () => {
 
         {/* SOCIALS */}
         <div>
-          <p className="font-lexendMega text-base md:text-lg">
+          <p className="font-lexendMega text-base md:text-lg mt-2">
             Spojme se na sítích!
           </p>
 
-          <div className="flex items-center mt-2">
+          <div className="flex items-center mt-4">
             <a
               href="https://www.instagram.com/vahyn_/"
               target="_blank"
               rel="noreferrer"
             >
-              <FaInstagram size={32} className="mr-4 cursor-pointer" />
+              <FaInstagram size={32} className="mr-4 cursor-pointer hover:scale-110 transition duration-300" />
             </a>
             <a
               href="https://www.facebook.com/Vahyn/"
               target="_blank"
               rel="noreferrer"
             >
-              <RiFacebookBoxFill size={35} className="mr-4 cursor-pointer" />
+              <RiFacebookBoxFill size={35} className="mr-4 cursor-pointer hover:scale-110 transition duration-300" />
             </a>
           </div>
         </div>
