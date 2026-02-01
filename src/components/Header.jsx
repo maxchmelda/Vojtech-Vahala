@@ -24,7 +24,7 @@ const Header = () => {
         className="
           absolute left-0 right-0
           -top-[20%] h-[140%]
-          bg-[url('/header-bg.png')]
+          bg-[url('/header-bg.jpg')]
           bg-cover bg-center bg-no-repeat
           will-change-transform
         "

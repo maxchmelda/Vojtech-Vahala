@@ -71,7 +71,7 @@ const Hody = () => {
       {/* IMAGE */}
       <img
         className="w-full lg:w-1/2 h-[300px] sm:h-[400px] lg:h-auto object-cover"
-        src="/hody.png"
+        src="/hody.jpg"
         alt="Moravské hody"
       />
     </div>

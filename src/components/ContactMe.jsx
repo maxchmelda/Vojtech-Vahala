@@ -43,7 +43,7 @@ const ContactMe = () => {
     >
       {/* BACKGROUND IMAGE */}
       <motion.img
-        src="contact-bg.png"
+        src="contact-bg.jpg"
         alt="background image contact section"
         style={{ y: bgY }}
         className="

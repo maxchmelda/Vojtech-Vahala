@@ -76,7 +76,7 @@ const AboutMe = () => {
       {/* IMAGE */}
       <img
         className="w-full lg:w-1/2 h-[300px] sm:h-[400px] lg:h-auto object-cover"
-        src="/about-pic.png"
+        src="/about-pic.jpg"
         alt="about me image"
       />
     </div>
