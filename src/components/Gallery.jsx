@@ -5,6 +5,8 @@ import "../carousel.css";
 import { useWindowSize } from "react-use";
 import axios from "axios";
 import CircularProgress from '@mui/material/CircularProgress';
+import Left from '../assets/left.png';
+import Right from '../assets/right.png';
 
 export default function Gallery() {
   const { width } = useWindowSize();
@@ -69,41 +71,33 @@ export default function Gallery() {
         )}
       </div>
 
+      <div className="absolute inset-0 bg-black/20 z-10 pointer-events-none" />
+
       {sliderLoaded && instanceRef.current?.track?.details?.slides && imageUrls.length > 0 && (
         <>
-          <Arrow
-            left
-            onClick={() => instanceRef.current.prev()}
-            disabled={currentSlide === 0}
+          <img
+            src={Left}
+            onClick={(e) => {
+              e.stopPropagation();
+              instanceRef.current.prev();
+            }}
+
+            className="absolute left-5 sm:left-10 top-1/2 -translate-y-1/2 h-10 sm:h-15 z-20 cursor-pointer hover:scale-110 transition-transform"
+            alt="Previous"
           />
 
-          <Arrow
-            onClick={() => instanceRef.current.next()}
-            disabled={
-              currentSlide === instanceRef.current.track.details.slides.length - 1
-            }
+          <img
+            src={Right}
+            onClick={(e) => {
+              e.stopPropagation();
+              instanceRef.current.next();
+            }}
+
+            className="absolute right-5 sm:right-10 top-1/2 -translate-y-1/2 h-10 sm:h-15 z-20 cursor-pointer hover:scale-110 transition-transform"
+            alt="Next"
           />
         </>
       )}
     </div>
-  );
-}
-
-function Arrow({ left, onClick, disabled }) {
-  return (
-    <svg
-      onClick={onClick}
-      className={`arrow ${left ? "arrow--left" : "arrow--right"} ${
-        disabled ? "arrow--disabled" : ""
-      }`}
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-    >
-      {left ? (
-        <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
-      ) : (
-        <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
-      )}
-    </svg>
   );
 }
