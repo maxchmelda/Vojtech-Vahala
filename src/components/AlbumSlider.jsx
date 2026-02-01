@@ -68,7 +68,7 @@ export default function AlbumSlider() {
     const loadAlbums = async () => {
       try {
         const res = await axios.get(
-          "https://cloudinaryapi-64q1.onrender.com/albums"
+          `${import.meta.url.VITE_API_URL}/albums`
         )
         setAlbums(res.data.albums)
       } catch {

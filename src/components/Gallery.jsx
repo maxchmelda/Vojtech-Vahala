@@ -5,8 +5,8 @@ import "../carousel.css";
 import { useWindowSize } from "react-use";
 import axios from "axios";
 import CircularProgress from '@mui/material/CircularProgress';
-import Left from '../assets/left.png';
-import Right from '../assets/right.png';
+import Left from '../assets/icons/left.png';
+import Right from '../assets/icons/right.png';
 import { LinearProgress } from "@mui/material";
 
 export default function Gallery() {
@@ -34,7 +34,7 @@ export default function Gallery() {
   useEffect(() => {
     const loadImages = async () => {
       try {
-        const res = await axios.get("https://cloudinaryapi-64q1.onrender.com/slider");
+        const res = await axios.get(`${import.meta.url.VITE_API_URL}/slider`);
         setImageUrls(res.data);
       } catch (err) {
         console.error("Error loading slider images:", err);
@@ -47,7 +47,7 @@ export default function Gallery() {
   // 2) Reinitializace slideru, když se změní obrázky
   useEffect(() => {
     if (instanceRef.current) {
-      instanceRef.current.update(); // 🔥 teď slider funguje
+      instanceRef.current.update(); 
     }
   }, [imageUrls, width]);
 
@@ -65,7 +65,7 @@ export default function Gallery() {
           <div className="absolute inset-0 bg-black/20 z-10 pointer-events-none" />
         </>
       ) : (
-        <div className="w-full aspect-[2/1] md:aspect-[3/1] min-h-[300px] flex flex-col justify-center items-center bg-neutral-900 text-center">
+        <div className="w-full aspect-2/1 md:aspect-3/1 min-h-[300px] flex flex-col justify-center items-center bg-neutral-900 text-center">
             <div className="w-64 max-w-[80%]">
               
               {/* Typography: Uppercase, wide spacing, subtle color */}

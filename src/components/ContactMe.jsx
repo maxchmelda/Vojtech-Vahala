@@ -1,7 +1,9 @@
 import React, { useEffect, useState, useRef } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import ContactForm from "./ContactForm"
-import { FaFacebook, FaInstagram, FaPhone, FaEnvelope } from "react-icons/fa6"
+import { FaInstagram, FaPhone } from "react-icons/fa6"
+import { BsEnvelopeFill } from "react-icons/bs";
+import { RiFacebookBoxFill } from "react-icons/ri";
 
 const ContactMe = () => {
   const bgRef = useRef(null)
@@ -84,13 +86,13 @@ const ContactMe = () => {
         {/* ADDRESS + CONTACT */}
         <div>
           <div className="flex flex-col sm:flex-row gap-6">
-            <div className="w-full sm:w-1/2 flex flex-col gap-2 text-sm md:text-base">
+            <div className="w-full sm:w-[40%] flex flex-col gap-2 text-sm md:text-base">
               <h3 className="font-bold">Adresa</h3>
               <p>Město 123,<br />123 45 Město</p>
               <p><b>IČO:</b> 123456</p>
             </div>
 
-            <div className="w-full sm:w-1/2 flex flex-col gap-2 text-sm md:text-base">
+            <div className="w-full sm:w-[60%] flex flex-col gap-2 text-sm md:text-base">
               <h3 className="font-bold">Kontakt</h3>
 
               <div className="flex items-center gap-2">
@@ -99,8 +101,8 @@ const ContactMe = () => {
               </div>
 
               <div className="flex items-center gap-2">
-                <FaEnvelope />
-                <p>jmeno.prijmeni@gmail.com</p>
+                <BsEnvelopeFill />
+                <a href="mailto:email@gmail.com">jmeno.prijmeni@gmail.com</a>
               </div>
             </div>
           </div>
@@ -114,25 +116,27 @@ const ContactMe = () => {
         </div>
 
         {/* SOCIALS */}
-        <p className="font-lexendMega text-base md:text-lg">
-          Spojme se na sítích!
-        </p>
+        <div>
+          <p className="font-lexendMega text-base md:text-lg">
+            Spojme se na sítích!
+          </p>
 
-        <div className="flex items-center">
-          <a
-            href="https://www.instagram.com/vahyn_/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaInstagram size={28} className="mr-4 cursor-pointer" />
-          </a>
-          <a
-            href="https://www.facebook.com/Vahyn/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaFacebook size={28} className="mr-4 cursor-pointer" />
-          </a>
+          <div className="flex items-center mt-2">
+            <a
+              href="https://www.instagram.com/vahyn_/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaInstagram size={32} className="mr-4 cursor-pointer" />
+            </a>
+            <a
+              href="https://www.facebook.com/Vahyn/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <RiFacebookBoxFill size={35} className="mr-4 cursor-pointer" />
+            </a>
+          </div>
         </div>
       </div>
     </div>
