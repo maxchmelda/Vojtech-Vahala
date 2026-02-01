@@ -19,7 +19,7 @@ const chunkArray = (array, size) => {
 }
 
 const getPerPage = (w) => {
-  if (w < 640) return 1
+  if (w < 640) return 4
   if (w < 1024) return 4
   return 6
 }
@@ -128,7 +128,7 @@ export default function AlbumSlider() {
               >
                 <div className="grid grid-cols-3 justify-center gap-1
                                 max-lg:grid-cols-2
-                                max-sm:grid-cols-1">
+                                max-sm:grid-cols-2">
                   {page.map((album) => (
                     <div
                       key={album.name}
