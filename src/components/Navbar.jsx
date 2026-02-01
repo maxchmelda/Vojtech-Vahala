@@ -56,7 +56,7 @@ const Navbar = () => {
                     className="absolute inset-0 w-full h-full object-cover z-20"
                 />
 
-                <div className="max-sm:justify-between max-sm:px-2 relative z-20 h-full flex justify-around items-center">
+                <div className="max-[1150px]:justify-between max-[1150px]:px-10 max-sm:px-3 relative z-20 h-full flex justify-around items-center">
                     <Link to="/" className="cursor-pointer max-md:text-xs pl-2 border-l-2 mb-1 flex flex-col justify-center font-lexendMega text-sm font-medium items-start">
                         <h1>Fotograf</h1>
                         <h2>Vojtěch Vahala</h2>
