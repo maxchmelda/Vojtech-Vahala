@@ -7,6 +7,7 @@ import axios from "axios";
 import CircularProgress from '@mui/material/CircularProgress';
 import Left from '../assets/left.png';
 import Right from '../assets/right.png';
+import { LinearProgress } from "@mui/material";
 
 export default function Gallery() {
   const { width } = useWindowSize();
@@ -52,26 +53,41 @@ export default function Gallery() {
 
   return (
     <div className="navigation-wrapper">
-      <div ref={sliderRef} className="keen-slider">
-        {imageUrls.length > 0 ? (
-          imageUrls.map((url, idx) => (
-            <img className="keen-slider__slide aspect-square" alt="slider image" src={url} key={idx} />
-          ))
-        ) : (
-          <>
-            {[1, 2, 3].map((i) => (
-              <div className="keen-slider__slide skeleton-slide" key={i}>
-                <div className="skeleton-box text-gray-500">
-                  <CircularProgress color="inherit" />
-                </div>
-              </div>
-            ))}
-          </> 
+      {imageUrls.length > 0 ? (
+        <>
+          <div ref={sliderRef} className="keen-slider">
+            {
+              imageUrls.map((url, idx) => (
+                <img className="keen-slider__slide aspect-square" alt="slider image" src={url} key={idx} />
+              ))
+            }
+          </div>
+          <div className="absolute inset-0 bg-black/20 z-10 pointer-events-none" />
+        </>
+      ) : (
+        <div className="w-full aspect-[2/1] md:aspect-[3/1] min-h-[300px] flex flex-col justify-center items-center bg-neutral-900 text-center">
+            <div className="w-64 max-w-[80%]">
+              
+              {/* Typography: Uppercase, wide spacing, subtle color */}
+              <p className="mb-4 sm:mb-6 text-neutral-400 font-lexend text-sm sm:text-md font-bold uppercase tracking-[0.3em] animate-pulse">
+                Načítání Galerie
+              </p>
+              
+              <LinearProgress
+                sx={{
+                  height: 2, // Very thin line looks more elegant
+                  borderRadius: 999,
+                  backgroundColor: "rgba(255,255,255, 0.1)", // Faint track
+                  "& .MuiLinearProgress-bar": {
+                    backgroundColor: "#ffffff", // Pure white bar (or use your brand color)
+                    borderRadius: 999,
+                  },
+                }}
+              />
+            </div>
+        </div>
+      )}
 
-        )}
-      </div>
-
-      <div className="absolute inset-0 bg-black/20 z-10 pointer-events-none" />
 
       {sliderLoaded && instanceRef.current?.track?.details?.slides && imageUrls.length > 0 && (
         <>
