@@ -1,6 +1,6 @@
-import { HashLink } from "react-router-hash-link"
-import { motion, useInView } from "framer-motion"
-import { useRef } from "react"
+import { HashLink } from "react-router-hash-link";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const text = `
   Jmenuji se Vojtěch Vahala a zaměřuji se na fotografii, která zachycuje přirozené
@@ -12,13 +12,13 @@ const text = `
 `;
 
 const AboutMe = () => {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const item = {
     hidden: { opacity: 0, y: 24 },
     visible: { opacity: 1, y: 0 },
-  }
+  };
 
   return (
     <div id="about" className="flex flex-col lg:flex-row w-full">
@@ -80,7 +80,7 @@ const AboutMe = () => {
         alt="about me image"
       />
     </div>
-  )
-}
+  );
+};
 
-export default AboutMe
+export default AboutMe;

@@ -1,11 +1,11 @@
-import Navbar from "./components/Navbar"
-import Header from "./components/Header"
-import Sluzby from "./components/Sluzby"
-import Gallery from "./components/Gallery"
-import AboutMe from "./components/AboutMe"
-import Hody from "./components/Hody"
-import ContactMe from "./components/ContactMe"
-import { Helmet } from "react-helmet"
+import Navbar from "./components/Navbar";
+import Header from "./components/Header";
+import Sluzby from "./components/Sluzby";
+import Gallery from "./components/Gallery";
+import AboutMe from "./components/AboutMe";
+import Hody from "./components/Hody";
+import ContactMe from "./components/ContactMe";
+import { Helmet } from "react-helmet";
 
 const App = () => {
   return (
@@ -15,20 +15,20 @@ const App = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "Vojtěch Vahala – Fotograf",
-            "image": `${import.meta.env.VITE_SITE_URL}/og-image.jpg`,
-            "url": import.meta.env.VITE_SITE_URL,
-            "telephone": "+420123456789", // Doplnit reálné číslo pokud chcete
-            "address": {
+            name: "Vojtěch Vahala – Fotograf",
+            image: `${import.meta.env.VITE_SITE_URL}/og-image.jpg`,
+            url: import.meta.env.VITE_SITE_URL,
+            telephone: "+420123456789", // Doplnit reálné číslo pokud chcete
+            address: {
               "@type": "PostalAddress",
-              "addressLocality": "Brno",
-              "addressCountry": "CZ"
+              addressLocality: "Brno",
+              addressCountry: "CZ",
             },
-            "areaServed": "Jihomoravský kraj",
-            "sameAs": [
+            areaServed: "Jihomoravský kraj",
+            sameAs: [
               "https://www.instagram.com/vahyn_/",
-              "https://www.facebook.com/Vahyn/"
-            ]
+              "https://www.facebook.com/Vahyn/",
+            ],
           })}
         </script>
       </Helmet>
@@ -46,7 +46,7 @@ const App = () => {
         <ContactMe />
       </main>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

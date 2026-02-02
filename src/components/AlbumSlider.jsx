@@ -1,106 +1,104 @@
-import React, { useEffect, useMemo, useState } from "react"
-import { useKeenSlider } from "keen-slider/react"
-import "keen-slider/keen-slider.min.css"
-import axios from "axios"
-import AlbumModal from "./AlbumModal"
-import { LinearProgress } from "@mui/material"
+import React, { useEffect, useMemo, useState } from "react";
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
+import axios from "axios";
+import AlbumModal from "./AlbumModal";
+import { LinearProgress } from "@mui/material";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
 const PLACEHOLDER =
-  "https://join.travelmanagers.com.au/wp-content/uploads/2017/09/default-placeholder-300x300.png"
+  "https://join.travelmanagers.com.au/wp-content/uploads/2017/09/default-placeholder-300x300.png";
 
 /* utils */
 const chunkArray = (array, size) => {
-  const result = []
+  const result = [];
   for (let i = 0; i < array.length; i += size) {
-    result.push(array.slice(i, i + size))
+    result.push(array.slice(i, i + size));
   }
-  return result
-}
+  return result;
+};
 
 const getPerPage = (w) => {
-  if (w < 640) return 4
-  if (w < 1024) return 4
-  return 6
-}
+  if (w < 640) return 4;
+  if (w < 1024) return 4;
+  return 6;
+};
 
 const getViewport = () => {
-  if (window.innerWidth < 640) return "mobile"
-  if (window.innerWidth < 1024) return "tablet"
-  return "desktop"
-}
+  if (window.innerWidth < 640) return "mobile";
+  if (window.innerWidth < 1024) return "tablet";
+  return "desktop";
+};
 
 export default function AlbumSlider() {
-  const [albums, setAlbums] = useState([])
-  const [openedAlbum, setOpenedAlbum] = useState(null)
-  const [currentSlide, setCurrentSlide] = useState(0)
-  const [loaded, setLoaded] = useState(false)
-  const [isLoading, setIsLoading] = useState(true)
-  const [error, setError] = useState(false)
+  const [albums, setAlbums] = useState([]);
+  const [openedAlbum, setOpenedAlbum] = useState(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [loaded, setLoaded] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(false);
 
-  const [perPage, setPerPage] = useState(getPerPage(window.innerWidth))
-  const [viewport, setViewport] = useState(getViewport())
+  const [perPage, setPerPage] = useState(getPerPage(window.innerWidth));
+  const [viewport, setViewport] = useState(getViewport());
 
   /* slider */
   const [sliderRef, instanceRef] = useKeenSlider({
     initial: 0,
     slides: { perView: 1 },
     slideChanged(slider) {
-      setCurrentSlide(slider.track.details.rel)
+      setCurrentSlide(slider.track.details.rel);
     },
     created() {
-      setLoaded(true)
+      setLoaded(true);
     },
-  })
+  });
 
   /* resize handling */
   useEffect(() => {
     const onResize = () => {
-      setPerPage(getPerPage(window.innerWidth))
-      setViewport(getViewport())
-    }
-    window.addEventListener("resize", onResize)
-    return () => window.removeEventListener("resize", onResize)
-  }, [])
+      setPerPage(getPerPage(window.innerWidth));
+      setViewport(getViewport());
+    };
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
 
   /* load albums */
   useEffect(() => {
     const loadAlbums = async () => {
       try {
-        const res = await axios.get(
-          `${import.meta.env.VITE_API_URL}/albums`
-        )
-        setAlbums(res.data.albums)
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/albums`);
+        setAlbums(res.data.albums);
       } catch {
-        setError(true)
+        setError(true);
       } finally {
-        setIsLoading(false)
+        setIsLoading(false);
       }
-    }
-    loadAlbums()
-  }, [])
+    };
+    loadAlbums();
+  }, []);
 
   /* pages */
   const pages = useMemo(() => {
-    if (albums.length === 0) return []
-    return chunkArray(albums, perPage)
-  }, [albums, perPage])
+    if (albums.length === 0) return [];
+    return chunkArray(albums, perPage);
+  }, [albums, perPage]);
 
-  const totalPages = pages.length
+  const totalPages = pages.length;
 
   /* navigation rules */
   const useCompactNav =
     viewport === "mobile" ||
     (viewport === "tablet" && totalPages > 8) ||
-    (viewport === "desktop" && totalPages > 14)
+    (viewport === "desktop" && totalPages > 14);
 
   /* update slider when pages change */
   useEffect(() => {
-    if (!instanceRef.current) return
-    instanceRef.current.update()
-    instanceRef.current.moveToIdx(0)
-    setCurrentSlide(0)
-  }, [pages.length])
+    if (!instanceRef.current) return;
+    instanceRef.current.update();
+    instanceRef.current.moveToIdx(0);
+    setCurrentSlide(0);
+  }, [pages.length]);
 
   return (
     <>
@@ -122,13 +120,12 @@ export default function AlbumSlider() {
         ) : (
           <div ref={sliderRef} className="keen-slider">
             {pages.map((page, idx) => (
-              <div
-                key={idx}
-                className="keen-slider__slide w-full min-w-full"
-              >
-                <div className="grid grid-cols-3 justify-center gap-1
+              <div key={idx} className="keen-slider__slide w-full min-w-full">
+                <div
+                  className="grid grid-cols-3 justify-center gap-1
                                 max-lg:grid-cols-2
-                                max-sm:grid-cols-2">
+                                max-sm:grid-cols-2"
+                >
                   {page.map((album) => (
                     <div
                       key={album.name}
@@ -143,16 +140,17 @@ export default function AlbumSlider() {
                                   transition-transform duration-300
                                   group-hover:scale-[1.06]"
                       />
-                      
-                      <div className="absolute bottom-0 left-0 w-full 
+
+                      <div
+                        className="absolute bottom-0 left-0 w-full 
                                       bg-black/85 text-white py-1 sm:py-2 px-2 sm:px-4
                                       opacity-100 sm:opacity-0 group-hover:opacity-100 
-                                      transition-opacity duration-300 pointer-events-none">
+                                      transition-opacity duration-300 pointer-events-none"
+                      >
                         <span className="text-xs sm:text-sm font-medium truncate block font-lexend text-overflow:ellipsis">
                           {album.name}
                         </span>
                       </div>
-
                     </div>
                   ))}
                 </div>
@@ -170,9 +168,7 @@ export default function AlbumSlider() {
             <div className="flex items-center gap-4">
               <button
                 onClick={() =>
-                  instanceRef.current?.moveToIdx(
-                    Math.max(currentSlide - 1, 0)
-                  )
+                  instanceRef.current?.moveToIdx(Math.max(currentSlide - 1, 0))
                 }
                 disabled={currentSlide === 0}
                 className="w-10 h-10 rounded-full bg-neutral-200
@@ -190,7 +186,7 @@ export default function AlbumSlider() {
               <button
                 onClick={() =>
                   instanceRef.current?.moveToIdx(
-                    Math.min(currentSlide + 1, totalPages - 1)
+                    Math.min(currentSlide + 1, totalPages - 1),
                   )
                 }
                 disabled={currentSlide === totalPages - 1}
@@ -227,11 +223,8 @@ export default function AlbumSlider() {
 
       {/* modal */}
       {openedAlbum && (
-        <AlbumModal
-          album={openedAlbum}
-          onClose={() => setOpenedAlbum(null)}
-        />
+        <AlbumModal album={openedAlbum} onClose={() => setOpenedAlbum(null)} />
       )}
     </>
-  )
+  );
 }

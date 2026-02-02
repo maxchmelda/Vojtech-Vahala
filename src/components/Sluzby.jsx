@@ -1,5 +1,5 @@
-import React, { useRef } from "react"
-import { motion, useInView } from "framer-motion"
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 const data = [
   {
@@ -38,7 +38,7 @@ const data = [
     text: "Kreativní vizuály produktů a služeb, které osloví zákazníky a podpoří prodej.",
     imageUrl: null,
   },
-]
+];
 
 const orderClasses = [
   "order-1",
@@ -47,11 +47,11 @@ const orderClasses = [
   "order-4 sm:order-3 lg:order-4",
   "order-5",
   "order-6",
-]
+];
 
 const Sluzby = () => {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
     <section
@@ -101,7 +101,7 @@ const Sluzby = () => {
         ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Sluzby
+export default Sluzby;

@@ -1,23 +1,23 @@
-import React, { useEffect } from "react"
-import { IoClose } from "react-icons/io5"
+import React, { useEffect } from "react";
+import { IoClose } from "react-icons/io5";
 
 export default function AlbumModal({ album, onClose }) {
   useEffect(() => {
     const onKeyDown = (e) => {
-      if (e.key === "Escape") onClose()
-    }
-    window.addEventListener("keydown", onKeyDown)
-    return () => window.removeEventListener("keydown", onKeyDown)
-  }, [onClose])
+      if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [onClose]);
 
-  if (!album) return null
+  if (!album) return null;
 
   return (
     /* BACKDROP */
     <div
       className="fixed inset-0 z-50 bg-black/80
                  flex items-center justify-center p-4"
-      onClick={onClose}   // 👈 klik na pozadí zavře modal
+      onClick={onClose} // 👈 klik na pozadí zavře modal
     >
       {/* MODAL */}
       <div
@@ -36,9 +36,7 @@ export default function AlbumModal({ album, onClose }) {
         </button>
 
         {/* title */}
-        <h2 className="text-white text-2xl font-semibold mb-6">
-          {album.name}
-        </h2>
+        <h2 className="text-white text-2xl font-semibold mb-6">{album.name}</h2>
 
         {/* photos */}
         <div
@@ -63,5 +61,5 @@ export default function AlbumModal({ album, onClose }) {
         </div>
       </div>
     </div>
-  )
+  );
 }

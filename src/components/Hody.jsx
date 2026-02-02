@@ -1,8 +1,8 @@
-import { HashLink } from "react-router-hash-link"
-import { motion, useInView } from "framer-motion"
-import { useRef } from "react"
+import { HashLink } from "react-router-hash-link";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
-const text =`
+const text = `
   Moravské hody pro mě nejsou jen událostí, ale živou tradicí plnou barev,
   emocí a silných momentů. Baví mě zachycovat atmosféru krojů, tance,
   hudby i radosti lidí, kteří tuto tradici udržují při životě.
@@ -13,13 +13,13 @@ const text =`
 `;
 
 const Hody = () => {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const item = {
     hidden: { opacity: 0, y: 24 },
     visible: { opacity: 1, y: 0 },
-  }
+  };
 
   return (
     <div className="flex flex-col lg:flex-row-reverse w-full">
@@ -75,7 +75,7 @@ const Hody = () => {
         alt="Moravské hody"
       />
     </div>
-  )
-}
+  );
+};
 
-export default Hody
+export default Hody;

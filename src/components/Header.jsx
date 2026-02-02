@@ -1,12 +1,12 @@
-import { Link } from "react-router"
-import { motion, useScroll, useTransform } from "framer-motion"
-import arrowDown from "../assets/header-arrow-down.svg"
+import { Link } from "react-router";
+import { motion, useScroll, useTransform } from "framer-motion";
+import arrowDown from "../assets/header-arrow-down.svg";
 
 const Header = () => {
-  const { scrollY } = useScroll()
+  const { scrollY } = useScroll();
 
   // jemnější, ale výraznější parallax
-  const bgY = useTransform(scrollY, [0, 600], [0, 160])
+  const bgY = useTransform(scrollY, [0, 600], [0, 160]);
 
   return (
     <div
@@ -66,7 +66,7 @@ const Header = () => {
         />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

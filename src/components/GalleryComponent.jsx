@@ -1,5 +1,5 @@
-import { Link } from "react-router"
-import AlbumSlider from "./AlbumSlider"
+import { Link } from "react-router";
+import AlbumSlider from "./AlbumSlider";
 
 const GalleryComponent = () => {
   return (
@@ -28,7 +28,7 @@ const GalleryComponent = () => {
         <Link to="/" className="underline hover:text-white transition">
           home
         </Link>
-        <span>{'>'}</span>
+        <span>{">"}</span>
         <span>galerie</span>
       </span>
 
@@ -59,7 +59,7 @@ const GalleryComponent = () => {
         <AlbumSlider />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default GalleryComponent
+export default GalleryComponent;

@@ -1,9 +1,8 @@
 export default {
   theme: {
     extend: {
-      fontFamily: {
-      },
+      fontFamily: {},
     },
   },
   plugins: [],
-}
+};

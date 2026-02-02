@@ -1,5 +1,5 @@
-import { motion } from "framer-motion"
-import LinearProgress from "@mui/material/LinearProgress"
+import { motion } from "framer-motion";
+import LinearProgress from "@mui/material/LinearProgress";
 
 const PageLoader = () => {
   return (
@@ -48,7 +48,7 @@ const PageLoader = () => {
         />
       </motion.div>
     </motion.div>
-  )
-}
+  );
+};
 
-export default PageLoader
+export default PageLoader;

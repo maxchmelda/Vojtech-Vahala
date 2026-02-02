@@ -17,12 +17,7 @@ body {
   border-radius: 10px;
   margin-top: 25px;
   margin-bottom: 25px;
-  background: linear-gradient(
-    90deg,
-    #e0e0e0 0%,
-    #f5f5f5 50%,
-    #e0e0e0 100%
-  );
+  background: linear-gradient(90deg, #e0e0e0 0%, #f5f5f5 50%, #e0e0e0 100%);
   background-size: 200% 100%;
   animation: skeleton-loading 1.5s infinite;
   display: flex;
@@ -39,7 +34,6 @@ body {
     background-position: -200% 0;
   }
 }
-
 
 .navigation-wrapper {
   position: relative;

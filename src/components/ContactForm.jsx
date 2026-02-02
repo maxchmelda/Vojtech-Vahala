@@ -1,6 +1,6 @@
-import { useState } from "react"
-import axios from "axios"
-import { FaPaperPlane } from "react-icons/fa6"
+import { useState } from "react";
+import axios from "axios";
+import { FaPaperPlane } from "react-icons/fa6";
 
 const API_URL = `${import.meta.env.VITE_API_URL}/contact`;
 
@@ -11,47 +11,47 @@ const ContactForm = () => {
     phone: "",
     shootType: "",
     message: "",
-  })
+  });
 
-  const [isSending, setIsSending] = useState(false)
-  const [success, setSuccess] = useState(false)
-  const [error, setError] = useState(false)
+  const [isSending, setIsSending] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleChange = (e) => {
     setForm((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
-    }))
-  }
+    }));
+  };
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    setIsSending(true)
-    setSuccess(false)
-    setError(false)
+    e.preventDefault();
+    setIsSending(true);
+    setSuccess(false);
+    setError(false);
 
     try {
       await axios.post(`${API_UR}/contact`, form, {
         headers: {
           "Content-Type": "application/json",
         },
-      })
+      });
 
-      setSuccess(true)
+      setSuccess(true);
       setForm({
         name: "",
         email: "",
         phone: "",
         shootType: "",
         message: "",
-      })
+      });
     } catch (err) {
-      console.error("Contact form error:", err)
-      setError(true)
+      console.error("Contact form error:", err);
+      setError(true);
     } finally {
-      setIsSending(false)
+      setIsSending(false);
     }
-  }
+  };
 
   return (
     <form
@@ -68,7 +68,9 @@ const ContactForm = () => {
       "
     >
       <h2 className="font-lexendMega text-xl sm:text-3xl font-semibold">
-        Kontaktní<br />formulář
+        Kontaktní
+        <br />
+        formulář
       </h2>
 
       <input
@@ -127,9 +129,7 @@ const ContactForm = () => {
       )}
 
       {error && (
-        <p className="text-red-400 text-sm">
-          Nepodařilo se odeslat zprávu ❌
-        </p>
+        <p className="text-red-400 text-sm">Nepodařilo se odeslat zprávu ❌</p>
       )}
 
       <button
@@ -144,11 +144,13 @@ const ContactForm = () => {
           cursor-pointer
         "
       >
-        <span className="max-sm:text-sm">{isSending ? "Odesílám…" : "Odeslat"}</span>
+        <span className="max-sm:text-sm">
+          {isSending ? "Odesílám…" : "Odeslat"}
+        </span>
         <FaPaperPlane />
       </button>
     </form>
-  )
-}
+  );
+};
 
-export default ContactForm
+export default ContactForm;
