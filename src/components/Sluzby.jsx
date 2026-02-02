@@ -5,37 +5,37 @@ const data = [
   {
     id: 1,
     title: "Moravské hody",
-    text: "Vivamus porttitor turpis ac leo. Integer rutrum, orci vestibulum ullamcorper.",
+    text: "Autentické zachycení tradic, krásy krojů a neopakovatelné atmosféry hodů.",
     imageUrl: "/servicesImgs/1.png",
   },
   {
     id: 2,
     title: "Akce a festivaly",
-    text: "Vivamus porttitor turpis ac leo. Integer rutrum, orci vestibulum ullamcorper.",
+    text: "Profesionální fotografie z kulturních akcí plná živých emocí a skvělé energie.",
     imageUrl: null,
   },
   {
     id: 3,
     title: "Portréty",
-    text: "Vivamus porttitor turpis ac leo. Integer rutrum, orci vestibulum ullamcorper.",
+    text: "Přirozené osobní fotografie, které podtrhnou vaši jedinečnost.",
     imageUrl: "/servicesImgs/3.png",
   },
   {
     id: 4,
     title: "Firemní portréty",
-    text: "Vivamus porttitor turpis ac leo. Integer rutrum, orci vestibulum ullamcorper.",
+    text: "Reprezentativní snímky pro váš web, nebo LinkedIn, které budují profesionální image.",
     imageUrl: null,
   },
   {
     id: 5,
     title: "Svatby a oslavy",
-    text: "Vivamus porttitor turpis ac leo. Integer rutrum, orci vestibulum ullamcorper.",
+    text: "Citlivé zachycení vašeho velkého dne a všech vzácných okamžiků s blízkými.",
     imageUrl: "/servicesImgs/2.png",
   },
   {
     id: 6,
     title: "Reklamní focení",
-    text: "Vivamus porttitor turpis ac leo. Integer rutrum, orci vestibulum ullamcorper.",
+    text: "Kreativní vizuály produktů a služeb, které osloví zákazníky a podpoří prodej.",
     imageUrl: null,
   },
 ]

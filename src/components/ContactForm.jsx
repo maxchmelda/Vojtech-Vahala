@@ -144,7 +144,7 @@ const ContactForm = () => {
           cursor-pointer
         "
       >
-        <span>{isSending ? "Odesílám…" : "Odeslat"}</span>
+        <span className="max-sm:text-sm">{isSending ? "Odesílám…" : "Odeslat"}</span>
         <FaPaperPlane />
       </button>
     </form>

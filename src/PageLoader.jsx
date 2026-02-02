@@ -16,8 +16,8 @@ const PageLoader = () => {
     >
       {/* NAME */}
       <motion.h1
-        initial={{ opacity: 0, scale: 0.9, letterSpacing: "0.2em" }}
-        animate={{ opacity: 1, scale: 1, letterSpacing: "0.05em" }}
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
         className="
           text-white

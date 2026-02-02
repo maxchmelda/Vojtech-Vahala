@@ -36,7 +36,7 @@ export default function Gallery() {
     const loadImages = async () => {
       try {
         setError(false);
-        const res = await axios.get(`${import.meta.env.VITE_API_URL}/sliders`);
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/slider`);
         setImageUrls(res.data);
       } catch (err) {
         console.error("Error loading slider images:", err);
