@@ -6,24 +6,14 @@ const GalleryPage = () => {
   return (
     <>
       <Helmet>
-        <title>Galerie fotografií – Vojtěch Vahala | Brno</title>
+        <title>Galerie fotografií – Vojtěch Vahala</title>
 
         <meta
           name="description"
-          content="Galerie fotografií – svatby, portréty, firemní focení, moravské hody a akce."
+          content="Galerie fotografií – svatby, portréty, firemní focení, moravské hody a akce. Prohlédněte si mou práci."
         />
 
-        <link rel="canonical" href="https://vojtechvahala.cz/gallery" />
-
-        <meta property="og:title" content="Galerie – Fotograf Vojtěch Vahala" />
-        <meta
-          property="og:description"
-          content="Ukázky fotografií ze svateb, portrétů, hodů a akcí."
-        />
-        <meta
-          property="og:image"
-          content="https://vojtechvahala.cz/og-image.png"
-        />
+        <link rel="canonical" href="https://vojtechvahala.cz/gallery" /> {/* Opravit */}
       </Helmet>
 
       <h1 className="sr-only">

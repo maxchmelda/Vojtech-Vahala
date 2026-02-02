@@ -1,18 +1,3 @@
-// import Navbar from "./components/Navbar"
-// import Footer from "./components/Footer"
-// import { Outlet } from "react-router"
-
-// export default function Layout() {
-//   return (
-//     <>
-//       <Navbar />
-//       <Outlet />   {/* sem se vloží children route */}
-//       <Footer />
-//     </>
-//   );
-// }
-
-
 import { useEffect, useState } from "react"
 import { AnimatePresence } from "framer-motion"
 import Navbar from "./components/Navbar"

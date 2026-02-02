@@ -11,38 +11,14 @@ const App = () => {
   return (
     <>
       <Helmet>
-        <title>
-          Fotograf Brno – Vojtěch Vahala | Svatební & portrétní focení
-        </title>
-
-        <meta
-          name="description"
-          content="Profesionální fotograf Brno a Jižní Morava. Svatební, portrétní a firemní focení, hody a festivaly."
-        />
-
-        <link rel="canonical" href="https://vojtechvahala.cz/" />
-
-        {/* Open Graph */}
-        <meta property="og:title" content="Fotograf Brno – Vojtěch Vahala" />
-        <meta
-          property="og:description"
-          content="Svatební, portrétní a firemní focení v Brně a okolí."
-        />
-        <meta
-          property="og:image"
-          content="https://vojtechvahala.cz/og-image.png"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:locale" content="cs_CZ" />
-        
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "Vojtěch Vahala – Fotograf",
-            "image": "https://vojtechvahala.cz/og-image.png",
-            "url": "https://vojtechvahala.cz",
-            "telephone": "+420123456789",
+            "image": "https://vojtechvahala.cz/og-image.jpg", // Opravit
+            "url": "https://vojtechvahala.cz", // Opravit
+            "telephone": "+420123456789", // Doplnit reálné číslo pokud chcete
             "address": {
               "@type": "PostalAddress",
               "addressLocality": "Brno",
