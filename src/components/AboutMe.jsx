@@ -61,12 +61,12 @@ const AboutMe = () => {
             <HashLink
               smooth
               to="/#contact"
-              className="max-[407px]:w-[168px] text-center py-2 px-6 rounded-full bg-white text-black hover:scale-105 transition-transform duration-300"
+              className="max-sm:text-sm max-[407px]:w-[168px] text-center py-2 px-6 rounded-full bg-white text-black hover:scale-105 transition-transform duration-300"
             >
               Kontaktujte mě
             </HashLink>
 
-            <button className="cursor-pointer max-[407px]:w-[168px] text-center py-2 px-6 rounded-full bg-[#BC0101] text-white hover:scale-105 transition-transform duration-300">
+            <button className="max-sm:text-sm cursor-pointer max-[407px]:w-[168px] text-center py-2 px-6 rounded-full bg-[#BC0101] text-white hover:scale-105 transition-transform duration-300">
               Ceník služeb
             </button>
           </motion.div>
