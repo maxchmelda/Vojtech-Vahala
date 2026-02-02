@@ -107,7 +107,7 @@ export default function AlbumSlider() {
       {/* error */}
       {error && (
         <div className="w-full text-white text-center py-2 max-sm:text-xs">
-          Chyba při načítání alb. Zkuste to prosím znovu později.
+          Chyba při načítání dat, zkuste obnovit stránku.
         </div>
       )}
 
