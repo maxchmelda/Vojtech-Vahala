@@ -16,8 +16,8 @@ const App = () => {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "Vojtěch Vahala – Fotograf",
-            "image": "https://vojtechvahala.cz/og-image.jpg", // Opravit
-            "url": "https://vojtechvahala.cz", // Opravit
+            "image": `${import.meta.env.VITE_SITE_URL}/og-image.jpg`,
+            "url": import.meta.env.VITE_SITE_URL,
             "telephone": "+420123456789", // Doplnit reálné číslo pokud chcete
             "address": {
               "@type": "PostalAddress",

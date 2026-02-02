@@ -13,7 +13,7 @@ const GalleryPage = () => {
           content="Galerie fotografií – svatby, portréty, firemní focení, moravské hody a akce. Prohlédněte si mou práci."
         />
 
-        <link rel="canonical" href="https://vojtechvahala.cz/gallery" /> {/* Opravit */}
+        <link rel="canonical" href={`${import.meta.env.VITE_SITE_URL}/gallery`} />
       </Helmet>
 
       <h1 className="sr-only">
