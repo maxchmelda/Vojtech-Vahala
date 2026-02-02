@@ -31,7 +31,7 @@ const ContactForm = () => {
     setError(false)
 
     try {
-      await axios.post(API_URL, form, {
+      await axios.post(`${API_UR}/contact`, form, {
         headers: {
           "Content-Type": "application/json",
         },
