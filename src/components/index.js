@@ -11,4 +11,4 @@ import Hody from './Hody';
 import Navbar from './Navbar';
 import Sluzby from './Sluzby';
 
-export default { AboutMe, AlbumModal, AlbumSlider, ContactForm, ContactMe, Footer, Gallery, GalleryComponent, Header, Hody, Navbar, Sluzby };
+export { AboutMe, AlbumModal, AlbumSlider, ContactForm, ContactMe, Footer, Gallery, GalleryComponent, Header, Hody, Navbar, Sluzby };

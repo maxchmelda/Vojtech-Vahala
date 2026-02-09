@@ -5,4 +5,4 @@ import Left from './left.png';
 import Right from './right.png';
 import Phone from './phone.png';
 
-export default { Email, Facebook, Instagram, Left, Right, Phone };
+export { Email, Facebook, Instagram, Left, Right, Phone };
