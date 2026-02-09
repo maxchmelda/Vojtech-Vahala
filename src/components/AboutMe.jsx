@@ -22,13 +22,13 @@ const AboutMe = () => {
 
   return (
     <div id="about" className="flex flex-col lg:flex-row w-full">
-      {/* TEXT BLOCK */}
+      {/* textovy blok */}
       <div className="w-full lg:w-1/2 bg-[#00171F] text-white px-8 py-10 sm:py-16 flex items-center">
         <div
           ref={ref}
           className="flex flex-col items-start justify-center gap-8 sm:gap-10 w-full lg:w-[80%] mx-auto font-lexend"
         >
-          {/* TITLE */}
+          {/* nadpis */}
           <motion.h2
             variants={item}
             initial="hidden"
@@ -39,7 +39,7 @@ const AboutMe = () => {
             Kdo jsem
           </motion.h2>
 
-          {/* TEXT */}
+          {/* text */}
           <motion.p
             variants={item}
             initial="hidden"
@@ -50,7 +50,7 @@ const AboutMe = () => {
             {text}
           </motion.p>
 
-          {/* BUTTONS */}
+          {/* tlacitka */}
           <motion.div
             variants={item}
             initial="hidden"
@@ -73,7 +73,7 @@ const AboutMe = () => {
         </div>
       </div>
 
-      {/* IMAGE */}
+      {/* obrazek */}
       <img
         className="w-full lg:w-1/2 h-[300px] sm:h-[400px] lg:h-auto object-cover"
         src="/about-pic.jpg"

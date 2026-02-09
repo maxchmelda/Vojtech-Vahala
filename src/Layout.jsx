@@ -9,6 +9,7 @@ export default function Layout() {
   const [pageReady, setPageReady] = useState(false);
 
   useEffect(() => {
+    // minimalni doba zobrazeni loaderu
     const MIN_DURATION = 1500;
     const start = Date.now();
 

@@ -15,7 +15,7 @@ const GalleryComponent = () => {
         mt-[-7px]
       "
     >
-      {/* breadcrumb */}
+      {/* breadcrumb navigace */}
       <span
         className="
           text-[#707070]
@@ -32,7 +32,7 @@ const GalleryComponent = () => {
         <span>galerie</span>
       </span>
 
-      {/* title */}
+      {/* nadpis */}
       <h2
         className="
           text-white font-lexendMega
@@ -43,7 +43,7 @@ const GalleryComponent = () => {
         Galerie
       </h2>
 
-      {/* description */}
+      {/* popis */}
       <p
         className="
           text-[#707070] text-center
@@ -54,7 +54,7 @@ const GalleryComponent = () => {
         Kliknutím na fotografii zobrazíte celé fotoalbum
       </p>
 
-      {/* slider */}
+      {/* slider s alby */}
       <div className="w-full mt-2 sm:mt-4">
         <AlbumSlider />
       </div>

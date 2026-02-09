@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import "../carousel.css";
@@ -29,7 +29,7 @@ export default function Gallery() {
     },
   });
 
-  // 1) Načtení obrázků z API
+  // nacitani obrazku z API
   useEffect(() => {
     const loadImages = async () => {
       try {
@@ -45,7 +45,7 @@ export default function Gallery() {
     loadImages();
   }, []);
 
-  // 2) Reinitializace slideru, když se změní obrázky
+  // reinicializace slideru pri zmene obrazku nebo sirky okna
   useEffect(() => {
     if (instanceRef.current) {
       instanceRef.current.update();
@@ -72,6 +72,7 @@ export default function Gallery() {
               />
             ))}
           </div>
+          {/* overlay pro lepsi citelnost */}
           <div className="absolute inset-0 bg-black/20 z-10 pointer-events-none" />
         </>
       ) : (
@@ -95,6 +96,7 @@ export default function Gallery() {
         </div>
       )}
 
+      {/* navigacni sipky */}
       {!error &&
         sliderLoaded &&
         instanceRef.current?.track?.details?.slides &&

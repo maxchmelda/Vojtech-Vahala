@@ -9,6 +9,7 @@ const Navbar = () => {
 
   const closeMenu = () => setOpen(false);
 
+  // renderovani navigacnich odkazu
   const renderLinks = () => (
     <>
       <Link
@@ -68,6 +69,7 @@ const Navbar = () => {
   return (
     <div className="relative">
       <nav className="relative max-sm:h-16 h-20">
+        {/* pozadi navigace */}
         <img
           src={navBG}
           alt="nav-bg"
@@ -83,12 +85,14 @@ const Navbar = () => {
             <h2>Vojtěch Vahala</h2>
           </Link>
 
+          {/* desktop navigace */}
           <div className="max-[1150px]:hidden flex justify-center mb-1 items-center gap-8 text-white">
             {renderLinks()}
           </div>
 
+          {/* hamburger menu tlacitko */}
           <button
-            className="hidden  max-[1150px]:flex text-white text-2xl"
+            className="hidden max-[1150px]:flex text-white text-2xl"
             onClick={() => setOpen(!open)}
           >
             {open ? <FaXmark /> : <FaBars />}
@@ -96,6 +100,7 @@ const Navbar = () => {
         </div>
       </nav>
 
+      {/* mobilni menu */}
       {open && (
         <div className="absolute top-18.5 max-sm:top-[59px] min-[1150px]:hidden right-0 max-sm:w-[60%] w-[50%] max-w-[300px] bg-[#00171F] backdrop-blur-md text-white flex flex-col items-start gap-6 py-6 px-6 z-50 font-lexend max-md:text-xs text-sm shadow-xl">
           {renderLinks()}

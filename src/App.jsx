@@ -12,7 +12,7 @@ const App = () => {
             name: "Vojtěch Vahala – Fotograf",
             image: `${import.meta.env.VITE_SITE_URL}/og-image.jpg`,
             url: import.meta.env.VITE_SITE_URL,
-            telephone: "+420123456789", // Doplnit realne cislo
+            telephone: "+420123456789", // TODO: doplnit realne cislo
             address: {
               "@type": "PostalAddress",
               addressLocality: "Brno",
@@ -28,7 +28,7 @@ const App = () => {
       </Helmet>
 
       <main className="max-w-[2000px] mx-auto">
-        {/* SEO h1 */}
+        {/* SEO h1 pro vyhledavace */}
         <h1 className="sr-only">
           Fotograf Brno – svatební, portrétní a firemní focení
         </h1>

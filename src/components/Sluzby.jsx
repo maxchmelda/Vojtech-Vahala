@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
 const data = [
@@ -85,14 +85,14 @@ const Sluzby = () => {
             }}
             className={`relative group overflow-hidden h-[180px] sm:h-40 z-50 ${orderClasses[index]}`}
           >
-            {/* IMAGE */}
+            {/* obrazek sluzby */}
             <img
               src={imageUrl ? imageUrl : "/servicesImgs/default.png"}
               alt={title}
               className="absolute inset-0 w-full h-full object-cover"
             />
 
-            {/* OVERLAY */}
+            {/* overlay s textem */}
             <div className="absolute inset-0 z-20 p-8 flex flex-col justify-center gap-4 text-white">
               <h2 className="text-xl font-semibold">{title}</h2>
               <p className="text-sm max-w-[90%]">{text}</p>

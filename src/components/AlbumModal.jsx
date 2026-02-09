@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { IoClose } from "react-icons/io5";
 
 export default function AlbumModal({ album, onClose }) {
+  // zavreni modalu pomoci ESC
   useEffect(() => {
     const onKeyDown = (e) => {
       if (e.key === "Escape") onClose();
@@ -13,19 +14,19 @@ export default function AlbumModal({ album, onClose }) {
   if (!album) return null;
 
   return (
-    /* BACKDROP */
+    // pozadi modalu
     <div
       className="fixed inset-0 z-50 bg-black/80
                  flex items-center justify-center p-4"
-      onClick={onClose} // 👈 klik na pozadí zavře modal
+      onClick={onClose}
     >
-      {/* MODAL */}
+      {/* modal */}
       <div
         className="relative w-full max-w-6xl max-h-full
                    bg-neutral-900 p-6 overflow-y-auto"
-        onClick={(e) => e.stopPropagation()} // 👈 zabrání zavření při kliku dovnitř
+        onClick={(e) => e.stopPropagation()}
       >
-        {/* close button */}
+        {/* tlacitko zavrit */}
         <button
           onClick={onClose}
           className="absolute top-4 right-4
@@ -35,10 +36,10 @@ export default function AlbumModal({ album, onClose }) {
           <IoClose />
         </button>
 
-        {/* title */}
+        {/* nazev alba */}
         <h2 className="text-white text-2xl font-semibold mb-6">{album.name}</h2>
 
-        {/* photos */}
+        {/* fotografie */}
         <div
           className="grid grid-cols-3 gap-3
                      max-md:grid-cols-2
@@ -51,6 +52,7 @@ export default function AlbumModal({ album, onClose }) {
               alt=""
               loading="lazy"
               onClick={() => window.open(url, "_blank")}
+              // kliknuti otevře fotografii v novem okne
               className="
                 w-full h-full object-cover cursor-pointer
                 transition-transform duration-200

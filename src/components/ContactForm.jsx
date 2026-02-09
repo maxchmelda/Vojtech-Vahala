@@ -31,7 +31,7 @@ const ContactForm = () => {
     setError(false);
 
     try {
-      await axios.post(`${API_UR}/contact`, form, {
+      await axios.post(API_URL, form, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -121,7 +121,7 @@ const ContactForm = () => {
         className="text-white max-sm:text-sm py-3 border-b border-b-white outline-none placeholder-white focus:placeholder-white/60 w-full resize-none bg-transparent"
       />
 
-      {/* feedback */}
+      {/* zprava o uspechu/chybe */}
       {success && (
         <p className="text-green-400 text-sm">
           Zpráva byla úspěšně odeslána ✅

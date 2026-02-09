@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import ContactForm from "./ContactForm";
 import { FaInstagram, FaPhone } from "react-icons/fa6";
@@ -9,7 +9,7 @@ const ContactMe = () => {
   const bgRef = useRef(null);
   const [isLg, setIsLg] = useState(false);
 
-  /* detect lg breakpoint (>=1024px) */
+  // detekce lg breakpointu (>=1024px)
   useEffect(() => {
     const check = () => setIsLg(window.innerWidth >= 1024);
     check();
@@ -17,13 +17,13 @@ const ContactMe = () => {
     return () => window.removeEventListener("resize", check);
   }, []);
 
-  /* scroll progress for parallax */
+  // scroll progress pro parallax
   const { scrollYProgress } = useScroll({
     target: bgRef,
     offset: ["start end", "end start"],
   });
 
-  /* 🔥 stronger parallax, lg only */
+  // parallax efekt pouze na velkych obrazovkach
   const bgY = useTransform(
     scrollYProgress,
     [0, 1],
@@ -41,7 +41,7 @@ const ContactMe = () => {
         gap-10 overflow-hidden
       "
     >
-      {/* BACKGROUND IMAGE */}
+      {/* pozadi s parallax efektem */}
       <motion.img
         src="contact-bg.jpg"
         alt="background image contact section"
@@ -55,10 +55,10 @@ const ContactMe = () => {
         "
       />
 
-      {/* FORM */}
+      {/* kontaktni formular */}
       <ContactForm />
 
-      {/* CONTACT INFO CARD */}
+      {/* kontaktni informace */}
       <div
         className="
           z-40 bg-white
@@ -69,7 +69,7 @@ const ContactMe = () => {
           font-lexend font-medium
         "
       >
-        {/* HEADING */}
+        {/* nadpis */}
         <div
           className="
             pl-2 border-l-4 max-sm:border-l-2
@@ -83,7 +83,7 @@ const ContactMe = () => {
           <h2>Vojtěch Vahala</h2>
         </div>
 
-        {/* ADDRESS + CONTACT */}
+        {/* adresa a kontakt */}
         <div>
           <div className="flex flex-col sm:flex-row gap-6">
             <div className="w-full sm:w-[40%] flex flex-col gap-2 text-sm md:text-base">
@@ -129,7 +129,7 @@ const ContactMe = () => {
           </p>
         </div>
 
-        {/* SOCIALS */}
+        {/* socialni site */}
         <div>
           <p className="font-lexendMega text-base md:text-lg mt-2">
             Spojme se na sítích!

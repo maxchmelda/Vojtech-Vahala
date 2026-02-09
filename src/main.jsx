@@ -8,7 +8,7 @@ import Layout from "./Layout.jsx";
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <Routes>
-      {/* všechny routes používají Layout */}
+      {/* vsechny routes pouzivaji Layout */}
       <Route element={<Layout />}>
         <Route path="/" element={<App />} />
         <Route path="/gallery" element={<GalleryPage />} />

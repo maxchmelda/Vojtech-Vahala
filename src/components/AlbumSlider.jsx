@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import axios from "axios";
@@ -9,7 +9,7 @@ import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 const PLACEHOLDER =
   "https://join.travelmanagers.com.au/wp-content/uploads/2017/09/default-placeholder-300x300.png";
 
-/* utils */
+// pomocne funkce
 const chunkArray = (array, size) => {
   const result = [];
   for (let i = 0; i < array.length; i += size) {
@@ -18,12 +18,14 @@ const chunkArray = (array, size) => {
   return result;
 };
 
+// pocet alb na stranku podle sirky okna
 const getPerPage = (w) => {
   if (w < 640) return 4;
   if (w < 1024) return 4;
   return 6;
 };
 
+// detekce typu viewportu
 const getViewport = () => {
   if (window.innerWidth < 640) return "mobile";
   if (window.innerWidth < 1024) return "tablet";
@@ -41,7 +43,7 @@ export default function AlbumSlider() {
   const [perPage, setPerPage] = useState(getPerPage(window.innerWidth));
   const [viewport, setViewport] = useState(getViewport());
 
-  /* slider */
+  // inicializace slideru
   const [sliderRef, instanceRef] = useKeenSlider({
     initial: 0,
     slides: { perView: 1 },
@@ -53,7 +55,7 @@ export default function AlbumSlider() {
     },
   });
 
-  /* resize handling */
+  // handlovani zmeny velikosti okna
   useEffect(() => {
     const onResize = () => {
       setPerPage(getPerPage(window.innerWidth));
@@ -63,7 +65,7 @@ export default function AlbumSlider() {
     return () => window.removeEventListener("resize", onResize);
   }, []);
 
-  /* load albums */
+  // nacitani alb z API
   useEffect(() => {
     const loadAlbums = async () => {
       try {
@@ -78,7 +80,7 @@ export default function AlbumSlider() {
     loadAlbums();
   }, []);
 
-  /* pages */
+  // rozdeleni alb do stranek
   const pages = useMemo(() => {
     if (albums.length === 0) return [];
     return chunkArray(albums, perPage);
@@ -86,13 +88,13 @@ export default function AlbumSlider() {
 
   const totalPages = pages.length;
 
-  /* navigation rules */
+  // rozhodnuti o typu navigace (kompaktni vs dots)
   const useCompactNav =
     viewport === "mobile" ||
     (viewport === "tablet" && totalPages > 8) ||
     (viewport === "desktop" && totalPages > 14);
 
-  /* update slider when pages change */
+  // aktualizace slideru pri zmene poctu stranek
   useEffect(() => {
     if (!instanceRef.current) return;
     instanceRef.current.update();
@@ -102,14 +104,14 @@ export default function AlbumSlider() {
 
   return (
     <>
-      {/* error */}
+      {/* chybova zprava */}
       {error && (
         <div className="w-full text-white text-center py-2 max-sm:text-xs">
           Chyba při načítání dat, zkuste obnovit stránku.
         </div>
       )}
 
-      {/* slider */}
+      {/* slider s alby */}
       <div className="w-full max-w-[1100px] mx-auto lg:px-6 overflow-hidden">
         {isLoading ? (
           <div className="w-full flex items-center justify-center pt-6">
@@ -131,7 +133,7 @@ export default function AlbumSlider() {
                       key={album.name}
                       onClick={() => setOpenedAlbum(album)}
                       className="relative w-full aspect-4/3
-                                overflow-hidden cursor-pointer group" // group je zde důležité
+                                overflow-hidden cursor-pointer group"
                     >
                       <img
                         src={album.coverImgUrl ?? PLACEHOLDER}
@@ -160,11 +162,11 @@ export default function AlbumSlider() {
         )}
       </div>
 
-      {/* navigation */}
+      {/* navigace */}
       {loaded && totalPages > 1 && (
         <div className="flex justify-center items-center mt-7">
           {useCompactNav ? (
-            /* arrows + page number */
+            // sipky + cislo stranky
             <div className="flex items-center gap-4">
               <button
                 onClick={() =>
@@ -199,7 +201,7 @@ export default function AlbumSlider() {
               </button>
             </div>
           ) : (
-            /* dots */
+            // tecky pro navigaci
             <div className="flex gap-4 flex-wrap justify-center max-w-full">
               {pages.map((_, idx) => (
                 <button
@@ -221,7 +223,7 @@ export default function AlbumSlider() {
         </div>
       )}
 
-      {/* modal */}
+      {/* modal s fotografiemi z alba */}
       {openedAlbum && (
         <AlbumModal album={openedAlbum} onClose={() => setOpenedAlbum(null)} />
       )}

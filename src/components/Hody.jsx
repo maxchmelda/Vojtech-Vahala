@@ -23,13 +23,13 @@ const Hody = () => {
 
   return (
     <div className="flex flex-col lg:flex-row-reverse w-full">
-      {/* TEXT BLOCK */}
+      {/* textovy blok */}
       <div className="w-full lg:w-1/2 bg-[#00171F] text-white px-8 py-10 sm:py-16 flex items-center">
         <div
           ref={ref}
           className="flex flex-col items-start justify-center gap-8 sm:gap-10 w-full lg:w-[80%] mx-auto font-lexend"
         >
-          {/* TITLE */}
+          {/* nadpis */}
           <motion.h2
             variants={item}
             initial="hidden"
@@ -40,7 +40,7 @@ const Hody = () => {
             Moravské hody
           </motion.h2>
 
-          {/* TEXT */}
+          {/* text */}
           <motion.p
             variants={item}
             initial="hidden"
@@ -51,7 +51,7 @@ const Hody = () => {
             {text}
           </motion.p>
 
-          {/* BUTTON */}
+          {/* tlacitko */}
           <motion.div
             variants={item}
             initial="hidden"
@@ -68,7 +68,7 @@ const Hody = () => {
         </div>
       </div>
 
-      {/* IMAGE */}
+      {/* obrazek */}
       <img
         className="w-full lg:w-1/2 h-[300px] sm:h-[400px] lg:h-auto object-cover"
         src="/hody.jpg"

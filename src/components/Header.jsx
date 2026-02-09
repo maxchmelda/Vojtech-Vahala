@@ -5,7 +5,7 @@ import arrowDown from "../assets/header-arrow-down.svg";
 const Header = () => {
   const { scrollY } = useScroll();
 
-  // jemnější, ale výraznější parallax
+  // parallax efekt pro pozadi
   const bgY = useTransform(scrollY, [0, 600], [0, 160]);
 
   return (
@@ -18,7 +18,7 @@ const Header = () => {
         flex justify-center items-end
       "
     >
-      {/* BACKGROUND */}
+      {/* pozadi s parallax efektem */}
       <motion.div
         style={{ y: bgY }}
         className="
@@ -30,7 +30,7 @@ const Header = () => {
         "
       />
 
-      {/* CONTENT */}
+      {/* obsah */}
       <div
         className="
           relative z-10
@@ -53,6 +53,7 @@ const Header = () => {
           Prohlédnout portfolio
         </Link>
 
+        {/* animovana sipka dolu */}
         <motion.img
           src={arrowDown}
           alt="arrow down"

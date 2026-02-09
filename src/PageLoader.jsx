@@ -14,7 +14,7 @@ const PageLoader = () => {
         overflow-hidden
       "
     >
-      {/* NAME */}
+      {/* jmeno */}
       <motion.h1
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -29,7 +29,7 @@ const PageLoader = () => {
         Vojtěch Vahala
       </motion.h1>
 
-      {/* LOADING BAR */}
+      {/* progress bar */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
