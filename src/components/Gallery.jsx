@@ -4,9 +4,7 @@ import "keen-slider/keen-slider.min.css";
 import "../carousel.css";
 import { useWindowSize } from "react-use";
 import axios from "axios";
-import CircularProgress from "@mui/material/CircularProgress";
-import Left from "../assets/icons/left.png";
-import Right from "../assets/icons/right.png";
+import { Left, Right } from "../assets/icons";
 import { LinearProgress } from "@mui/material";
 
 export default function Gallery() {
