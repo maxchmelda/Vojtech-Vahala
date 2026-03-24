@@ -4,7 +4,7 @@ import { motion, useInView } from "framer-motion";
 const data = [
   {
     id: 1,
-    title: "Moravské hody",
+    title: "Focení hodů",
     text: "Autentické zachycení tradic, krásy krojů a neopakovatelné atmosféry hodů.",
     imageUrl: "/servicesImgs/1.png",
   },
@@ -16,14 +16,14 @@ const data = [
   },
   {
     id: 3,
-    title: "Portréty",
-    text: "Přirozené osobní fotografie, které podtrhnou vaši jedinečnost.",
+    title: "Realitní focení",
+    text: "Profesionální fotografie nemovitostí, které pomohou prodat nebo pronajmout vaši nemovitost.",
     imageUrl: "/servicesImgs/3.png",
   },
   {
     id: 4,
-    title: "Firemní portréty",
-    text: "Reprezentativní snímky pro váš web, nebo LinkedIn, které budují profesionální image.",
+    title: "Video produkce reklam",
+    text: "Kreativní a dynamická video produkce reklam, která zaujme vaše zákazníky a podpoří prodej vašich produktů nebo služeb.",
     imageUrl: null,
   },
   {
@@ -34,8 +34,8 @@ const data = [
   },
   {
     id: 6,
-    title: "Reklamní focení",
-    text: "Kreativní vizuály produktů a služeb, které osloví zákazníky a podpoří prodej.",
+    title: "Focení portrétů a párů",
+    text: "Zachycení jedinečných okamžiků a emocí ve vašem životě.",
     imageUrl: null,
   },
 ];

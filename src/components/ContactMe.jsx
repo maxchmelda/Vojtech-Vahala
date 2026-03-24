@@ -89,13 +89,13 @@ const ContactMe = () => {
             <div className="w-full sm:w-[40%] flex flex-col gap-2 text-sm md:text-base">
               <h3 className="font-bold">Adresa</h3>
               <p>
-                Město 123,
+                Těšany 350,
                 <br />
-                123 45 Město
+                664 54
               </p>
-              <p>
-                <b>IČO:</b> 123456
-              </p>
+              {/* <p>
+                <b>IČO:</b> -/-
+              </p> */}
             </div>
 
             <div className="w-full sm:w-[60%] flex flex-col gap-2 text-sm md:text-base">
@@ -107,26 +107,26 @@ const ContactMe = () => {
                   href="tel:+420123456789"
                   className="hover:underline cursor-pointer"
                 >
-                  +420 123 456 789
+                  +420 734 597 119
                 </a>
               </div>
 
               <div className="flex items-center gap-2">
                 <BsEnvelopeFill />
                 <a
-                  href="mailto:email@gmail.com"
+                  href="mailto:vahynproduction@gmail.com"
                   className="hover:underline cursor-pointer"
                 >
-                  jmeno.prijmeni@gmail.com
+                  vahynproduction@gmail.com
                 </a>
               </div>
             </div>
           </div>
 
-          <p className="mt-2 text-sm md:text-base">
+          {/* <p className="mt-2 text-sm md:text-base">
             Fyzická osoba zapsaná v{" "}
             <a className="underline cursor-pointer">Živnostenském rejstříku</a>
-          </p>
+          </p> */}
         </div>
 
         {/* socialni site */}

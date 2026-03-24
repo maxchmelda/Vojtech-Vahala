@@ -18,14 +18,18 @@ const Header = () => {
         flex justify-center items-end
       "
     >
-      {/* pozadi s parallax efektem */}
-      <motion.div
+      {/* video pozadi s parallax efektem */}
+      <motion.video
         style={{ y: bgY }}
+        autoPlay
+        loop
+        muted
+        playsInline
+        src="/header.mp4"
         className="
           absolute left-0 right-0
-          -top-[20%] h-[140%]
-          bg-[url('/header-bg.jpg')]
-          bg-cover bg-center bg-no-repeat
+          -top-[20%] w-full h-[140%]
+          object-cover
           will-change-transform
         "
       />
@@ -36,7 +40,7 @@ const Header = () => {
           relative z-10
           flex flex-col items-center
           gap-8 sm:gap-16 md:gap-20
-          mb-[60px] sm:mb-[90px] md:mb-[120px]
+          mb-[60px] sm:mb-[70px] md:mb-[80px]
         "
       >
         <Link
