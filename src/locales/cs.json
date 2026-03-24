@@ -1,0 +1,76 @@
+{
+  "nav": {
+    "home": "home",
+    "sluzby": "služby",
+    "galerie": "galerie",
+    "omne": "o mně",
+    "kontakt": "kontakt",
+    "fotograf": "Fotograf",
+    "jmeno": "Vojtěch Vahala"
+  },
+  "header": {
+    "portfolio": "Prohlédnout portfolio"
+  },
+  "about": {
+    "title": "Kdo jsem",
+    "text": "Jmenuji se Vojtěch Vahala a zaměřuji se na fotografii, která zachycuje přirozené emoce a autentické okamžiky. Každé focení beru individuálně a dbám na to, aby se lidé před objektivem cítili uvolněně a sami sebou. Fotím svatby, portréty, firemní focení i akce. Působím v Brně a na jižní Moravě, ale za zajímavými projekty rád přijedu kamkoliv.",
+    "contactBtn": "Kontaktujte mě",
+    "pricingBtn": "Ceník služeb"
+  },
+  "services": {
+    "title": "Služby",
+    "item1": {
+      "title": "Focení hodů",
+      "text": "Autentické zachycení tradic, krásy krojů a neopakovatelné atmosféry hodů."
+    },
+    "item2": {
+      "title": "Akce a festivaly",
+      "text": "Profesionální fotografie z kulturních akcí plná živých emocí a skvělé energie."
+    },
+    "item3": {
+      "title": "Realitní focení",
+      "text": "Profesionální fotografie nemovitostí, které pomohou prodat nebo pronajmout vaši nemovitost."
+    },
+    "item4": {
+      "title": "Video produkce reklam",
+      "text": "Kreativní a dynamická video produkce reklam, která zaujme vaše zákazníky a podpoří prodej vašich produktů nebo služeb."
+    },
+    "item5": {
+      "title": "Svatby a oslavy",
+      "text": "Citlivé zachycení vašeho velkého dne a všech vzácných okamžiků s blízkými."
+    },
+    "item6": {
+      "title": "Focení portrétů a párů",
+      "text": "Zachycení jedinečných okamžiků a emocí ve vašem životě."
+    }
+  },
+  "contact": {
+    "formTitle": "Kontaktní formulář",
+    "name": "Jméno a příjmení *",
+    "email": "E-mail *",
+    "phone": "Telefon",
+    "shootType": "Typ focení",
+    "message": "Poznámka",
+    "success": "Zpráva byla úspěšně odeslána ✅",
+    "error": "Nepodařilo se odeslat zprávu ❌",
+    "sending": "Odesílám…",
+    "send": "Odeslat",
+    "addressTitle": "Adresa",
+    "contactTitle": "Kontakt",
+    "socialTitle": "Spojme se na sítích!"
+  },
+  "gallery": {
+    "error": "Chyba při načítání dat, zkuste obnovit stránku.",
+    "loading": "Načítání Galerie",
+    "title": "Galerie",
+    "subtitle": "Kliknutím na fotografii zobrazíte celé fotoalbum"
+  },
+  "footer": {
+    "madeBy": "Vytvořili Max Chmelíček a Adam Hladík"
+  },
+  "hody": {
+    "title": "Moravské hody",
+    "text": "Moravské hody pro mě nejsou jen událostí, ale živou tradicí plnou barev, emocí a silných momentů. Baví mě zachycovat atmosféru krojů, tance, hudby i radosti lidí, kteří tuto tradici udržují při životě. Fotografováním hodů se snažím uchovat jejich jedinečný charakter a přirozenou energii tak, aby fotografie vyprávěly příběh i dlouho po skončení samotné akce.",
+    "btn": "Zobrazit v galerii"
+  }
+}

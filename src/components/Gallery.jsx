@@ -6,8 +6,10 @@ import { useWindowSize } from "react-use";
 import axios from "axios";
 import { Left, Right } from "../assets/icons";
 import { LinearProgress } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 export default function Gallery() {
+  const { t } = useTranslation();
   const { width } = useWindowSize();
 
   const [imageUrls, setImageUrls] = useState([]);
@@ -57,7 +59,7 @@ export default function Gallery() {
       {error ? (
         <div className="w-full aspect-2/1 md:aspect-3/1 min-h-[300px] flex flex-col justify-center items-center bg-neutral-900 text-center">
           <p className="text-white text-center py-2 max-sm:text-xs">
-            Chyba při načítání dat, zkuste obnovit stránku.
+            {t('gallery.error')}
           </p>
         </div>
       ) : imageUrls.length > 0 ? (
@@ -79,7 +81,7 @@ export default function Gallery() {
         <div className="w-full aspect-2/1 md:aspect-3/1 min-h-[300px] flex flex-col justify-center items-center bg-neutral-900 text-center">
           <div className="w-64 max-w-[80%]">
             <p className="mb-4 sm:mb-6 text-neutral-400 font-lexend text-sm sm:text-md font-bold uppercase tracking-[0.3em] animate-pulse">
-              Načítání Galerie
+              {t('gallery.loading')}
             </p>
             <LinearProgress
               sx={{

@@ -1,7 +1,9 @@
 import { Link } from "react-router";
 import AlbumSlider from "./AlbumSlider";
+import { useTranslation } from "react-i18next";
 
 const GalleryComponent = () => {
+  const { t } = useTranslation();
   return (
     <div
       id="gallery"
@@ -26,10 +28,10 @@ const GalleryComponent = () => {
         "
       >
         <Link to="/" className="underline hover:text-white transition">
-          home
+          {t('nav.home')}
         </Link>
         <span>{">"}</span>
-        <span>galerie</span>
+        <span>{t('nav.galerie')}</span>
       </span>
 
       {/* nadpis */}
@@ -40,7 +42,7 @@ const GalleryComponent = () => {
           text-center
         "
       >
-        Galerie
+        {t('gallery.title')}
       </h2>
 
       {/* popis */}
@@ -51,7 +53,7 @@ const GalleryComponent = () => {
           max-w-md sm:max-w-lg md:max-w-xl
         "
       >
-        Kliknutím na fotografii zobrazíte celé fotoalbum
+        {t('gallery.subtitle')}
       </p>
 
       {/* slider s alby */}

@@ -1,19 +1,12 @@
 import { HashLink } from "react-router-hash-link";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-
-const text = `
-  Jmenuji se Vojtěch Vahala a zaměřuji se na fotografii, která zachycuje přirozené
-  emoce a autentické okamžiky. Každé focení beru individuálně a dbám na to, aby se
-  lidé před objektivem cítili uvolněně a sami sebou.
-
-  Fotím svatby, portréty, firemní focení i akce. Působím v Brně a na jižní Moravě,
-  ale za zajímavými projekty rád přijedu kamkoliv.
-`;
+import { useTranslation } from "react-i18next";
 
 const AboutMe = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useTranslation();
 
   const item = {
     hidden: { opacity: 0, y: 24 },
@@ -36,7 +29,7 @@ const AboutMe = () => {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="text-2xl md:text-3xl font-lexendMega font-semibold"
           >
-            Kdo jsem
+            {t('about.title')}
           </motion.h2>
 
           {/* text */}
@@ -47,7 +40,7 @@ const AboutMe = () => {
             transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
             className="text-sm md:text-base text-[#838383] leading-relaxed"
           >
-            {text}
+            {t('about.text')}
           </motion.p>
 
           {/* tlacitka */}
@@ -63,11 +56,11 @@ const AboutMe = () => {
               to="/#contact"
               className="max-sm:text-sm max-[407px]:w-[168px] text-center py-2 px-6 rounded-full bg-white text-black hover:scale-105 transition-transform duration-300"
             >
-              Kontaktujte mě
+              {t('about.contactBtn')}
             </HashLink>
 
             <button className="max-sm:text-sm cursor-pointer max-[407px]:w-[168px] text-center py-2 px-6 rounded-full bg-[#BC0101] text-white hover:scale-105 transition-transform duration-300">
-              Ceník služeb
+              {t('about.pricingBtn')}
             </button>
           </motion.div>
         </div>

@@ -1,0 +1,76 @@
+{
+  "nav": {
+    "home": "home",
+    "sluzby": "services",
+    "galerie": "gallery",
+    "omne": "about me",
+    "kontakt": "contact",
+    "fotograf": "Photographer",
+    "jmeno": "Vojtěch Vahala"
+  },
+  "header": {
+    "portfolio": "View Portfolio"
+  },
+  "about": {
+    "title": "About Me",
+    "text": "My name is Vojtěch Vahala and I focus on photography that captures natural emotions and authentic moments. I approach each photoshoot individually, ensuring that people feel relaxed and themselves in front of the lens. I shoot weddings, portraits, corporate events, and parties. I am based in Brno and South Moravia, but I'm always happy to travel anywhere for interesting projects.",
+    "contactBtn": "Contact me",
+    "pricingBtn": "Pricing"
+  },
+  "services": {
+    "title": "Services",
+    "item1": {
+      "title": "Feast Photography",
+      "text": "Authentic capturing of traditions, the beauty of folklore costumes, and the unique atmosphere of traditional feasts."
+    },
+    "item2": {
+      "title": "Events and Festivals",
+      "text": "Professional photography from cultural events full of lively emotions and great energy."
+    },
+    "item3": {
+      "title": "Real Estate Photography",
+      "text": "Professional real estate photography to help sell or rent your property."
+    },
+    "item4": {
+      "title": "Video Commercial Production",
+      "text": "Creative and dynamic commercial video production that boosts sales of your products or services."
+    },
+    "item5": {
+      "title": "Weddings and Celebrations",
+      "text": "Sensitive capturing of your big day and all the precious moments with your loved ones."
+    },
+    "item6": {
+      "title": "Portraits and Couples",
+      "text": "Capturing unique moments and emotions in your life."
+    }
+  },
+  "contact": {
+    "formTitle": "Contact Form",
+    "name": "Full Name *",
+    "email": "E-mail *",
+    "phone": "Phone",
+    "shootType": "Type of shoot",
+    "message": "Message",
+    "success": "Message sent successfully ✅",
+    "error": "Failed to send the message ❌",
+    "sending": "Sending…",
+    "send": "Send",
+    "addressTitle": "Address",
+    "contactTitle": "Contact",
+    "socialTitle": "Let's connect!"
+  },
+  "gallery": {
+    "error": "Error loading data, please try refreshing the page.",
+    "loading": "Loading Gallery",
+    "title": "Gallery",
+    "subtitle": "Click on a photo to view the full album"
+  },
+  "footer": {
+    "madeBy": "Made by Max Chmelicek and Adam Hladik"
+  },
+  "hody": {
+    "title": "Moravian Feasts",
+    "text": "For me, Moravian feasts are not just an event, but a living tradition full of colors, emotions, and strong moments. I enjoy capturing the atmosphere of folk costumes, dancing, music, and the joy of the people who keep this tradition alive. By photographing feasts, I strive to preserve their unique character and natural energy so that the photos tell a story long after the event itself has ended.",
+    "btn": "View in Gallery"
+  }
+}

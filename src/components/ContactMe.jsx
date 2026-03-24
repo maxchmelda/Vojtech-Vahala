@@ -4,10 +4,12 @@ import ContactForm from "./ContactForm";
 import { FaInstagram, FaPhone } from "react-icons/fa6";
 import { BsEnvelopeFill } from "react-icons/bs";
 import { RiFacebookBoxFill } from "react-icons/ri";
+import { useTranslation } from "react-i18next";
 
 const ContactMe = () => {
   const bgRef = useRef(null);
   const [isLg, setIsLg] = useState(false);
+  const { t } = useTranslation();
 
   // detekce lg breakpointu (>=1024px)
   useEffect(() => {
@@ -79,15 +81,15 @@ const ContactMe = () => {
             text-xl md:text-2xl
           "
         >
-          <h2>Fotograf</h2>
-          <h2>Vojtěch Vahala</h2>
+          <h2>{t('nav.fotograf')}</h2>
+          <h2>{t('nav.jmeno')}</h2>
         </div>
 
         {/* adresa a kontakt */}
         <div>
           <div className="flex flex-col sm:flex-row gap-6">
             <div className="w-full sm:w-[40%] flex flex-col gap-2 text-sm md:text-base">
-              <h3 className="font-bold">Adresa</h3>
+              <h3 className="font-bold">{t('contact.addressTitle')}</h3>
               <p>
                 Těšany 350,
                 <br />
@@ -99,7 +101,7 @@ const ContactMe = () => {
             </div>
 
             <div className="w-full sm:w-[60%] flex flex-col gap-2 text-sm md:text-base">
-              <h3 className="font-bold">Kontakt</h3>
+              <h3 className="font-bold">{t('contact.contactTitle')}</h3>
 
               <div className="flex items-center gap-2">
                 <FaPhone />
@@ -132,7 +134,7 @@ const ContactMe = () => {
         {/* socialni site */}
         <div>
           <p className="font-lexendMega text-base md:text-lg mt-2">
-            Spojme se na sítích!
+            {t('contact.socialTitle')}
           </p>
 
           <div className="flex items-center mt-4">

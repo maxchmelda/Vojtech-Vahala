@@ -1,9 +1,11 @@
 import { Link } from "react-router";
 import { motion, useScroll, useTransform } from "framer-motion";
 import arrowDown from "../assets/header-arrow-down.svg";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
   const { scrollY } = useScroll();
+  const { t } = useTranslation();
 
   // parallax efekt pro pozadi
   const bgY = useTransform(scrollY, [0, 600], [0, 160]);
@@ -54,7 +56,7 @@ const Header = () => {
             hover:scale-105 transition duration-300
           "
         >
-          Prohlédnout portfolio
+          {t('header.portfolio')}
         </Link>
 
         {/* animovana sipka dolu */}

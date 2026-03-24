@@ -1,8 +1,10 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { FaPaperPlane } from "react-icons/fa6";
+import { useTranslation } from "react-i18next";
 
 const ContactForm = () => {
+  const { t } = useTranslation();
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -73,16 +75,14 @@ const ContactForm = () => {
       "
     >
       <h2 className="font-lexendMega text-xl sm:text-3xl font-semibold">
-        Kontaktní
-        <br />
-        formulář
+        {t('contact.formTitle')}
       </h2>
 
       <input
         type="text"
         name="name"
         required
-        placeholder="Jméno a příjmení *"
+        placeholder={t('contact.name')}
         value={form.name}
         onChange={handleChange}
         className="text-white max-sm:text-sm py-3 border-b border-b-white outline-none placeholder-white focus:placeholder-white/60 w-full bg-transparent"
@@ -92,7 +92,7 @@ const ContactForm = () => {
         type="email"
         name="email"
         required
-        placeholder="E-mail *"
+        placeholder={t('contact.email')}
         value={form.email}
         onChange={handleChange}
         className="text-white max-sm:text-sm py-3 border-b border-b-white outline-none placeholder-white focus:placeholder-white/60 w-full bg-transparent"
@@ -101,7 +101,7 @@ const ContactForm = () => {
       <input
         type="text"
         name="phone"
-        placeholder="Telefon"
+        placeholder={t('contact.phone')}
         value={form.phone}
         onChange={handleChange}
         className="text-white max-sm:text-sm py-3 border-b border-b-white outline-none placeholder-white focus:placeholder-white/60 w-full bg-transparent"
@@ -111,7 +111,7 @@ const ContactForm = () => {
         type="text"
         name="shootType"
         required
-        placeholder="Typ focení"
+        placeholder={t('contact.shootType')}
         value={form.shootType}
         onChange={handleChange}
         className="text-white max-sm:text-sm py-3 border-b border-b-white outline-none placeholder-white focus:placeholder-white/60 w-full bg-transparent"
@@ -120,7 +120,7 @@ const ContactForm = () => {
       <textarea
         name="message"
         rows={4}
-        placeholder="Poznámka"
+        placeholder={t('contact.message')}
         value={form.message}
         onChange={handleChange}
         className="text-white max-sm:text-sm py-3 border-b border-b-white outline-none placeholder-white focus:placeholder-white/60 w-full resize-none bg-transparent"
@@ -129,12 +129,12 @@ const ContactForm = () => {
       {/* zprava o uspechu/chybe */}
       {success && (
         <p className="text-green-400 text-sm">
-          Zpráva byla úspěšně odeslána ✅
+          {t('contact.success')}
         </p>
       )}
 
       {error && (
-        <p className="text-red-400 text-sm">Nepodařilo se odeslat zprávu ❌</p>
+        <p className="text-red-400 text-sm">{t('contact.error')}</p>
       )}
 
       <button
@@ -150,7 +150,7 @@ const ContactForm = () => {
         "
       >
         <span className="max-sm:text-sm">
-          {isSending ? "Odesílám…" : "Odeslat"}
+          {isSending ? t('contact.sending') : t('contact.send')}
         </span>
         <FaPaperPlane />
       </button>

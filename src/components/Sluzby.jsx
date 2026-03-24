@@ -1,44 +1,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-
-const data = [
-  {
-    id: 1,
-    title: "Focení hodů",
-    text: "Autentické zachycení tradic, krásy krojů a neopakovatelné atmosféry hodů.",
-    imageUrl: "/servicesImgs/1.png",
-  },
-  {
-    id: 2,
-    title: "Akce a festivaly",
-    text: "Profesionální fotografie z kulturních akcí plná živých emocí a skvělé energie.",
-    imageUrl: null,
-  },
-  {
-    id: 3,
-    title: "Realitní focení",
-    text: "Profesionální fotografie nemovitostí, které pomohou prodat nebo pronajmout vaši nemovitost.",
-    imageUrl: "/servicesImgs/3.png",
-  },
-  {
-    id: 4,
-    title: "Video produkce reklam",
-    text: "Kreativní a dynamická video produkce reklam, která zaujme vaše zákazníky a podpoří prodej vašich produktů nebo služeb.",
-    imageUrl: null,
-  },
-  {
-    id: 5,
-    title: "Svatby a oslavy",
-    text: "Citlivé zachycení vašeho velkého dne a všech vzácných okamžiků s blízkými.",
-    imageUrl: "/servicesImgs/2.png",
-  },
-  {
-    id: 6,
-    title: "Focení portrétů a párů",
-    text: "Zachycení jedinečných okamžiků a emocí ve vašem životě.",
-    imageUrl: null,
-  },
-];
+import { useTranslation } from "react-i18next";
 
 const orderClasses = [
   "order-1",
@@ -52,6 +14,46 @@ const orderClasses = [
 const Sluzby = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useTranslation();
+
+  const data = [
+    {
+      id: 1,
+      title: t('services.item1.title'),
+      text: t('services.item1.text'),
+      imageUrl: "/servicesImgs/1.png",
+    },
+    {
+      id: 2,
+      title: t('services.item2.title'),
+      text: t('services.item2.text'),
+      imageUrl: null,
+    },
+    {
+      id: 3,
+      title: t('services.item3.title'),
+      text: t('services.item3.text'),
+      imageUrl: "/servicesImgs/3.png",
+    },
+    {
+      id: 4,
+      title: t('services.item4.title'),
+      text: t('services.item4.text'),
+      imageUrl: null,
+    },
+    {
+      id: 5,
+      title: t('services.item5.title'),
+      text: t('services.item5.text'),
+      imageUrl: "/servicesImgs/2.png",
+    },
+    {
+      id: 6,
+      title: t('services.item6.title'),
+      text: t('services.item6.text'),
+      imageUrl: null,
+    },
+  ];
 
   return (
     <section
@@ -61,7 +63,7 @@ const Sluzby = () => {
                  flex flex-col gap-8 items-center justify-center"
     >
       <h2 className="text-white font-lexendMega text-2xl font-semibold lg:hidden">
-        Služby
+        {t('services.title')}
       </h2>
 
       <div

@@ -1,20 +1,12 @@
 import { HashLink } from "react-router-hash-link";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-
-const text = `
-  Moravské hody pro mě nejsou jen událostí, ale živou tradicí plnou barev,
-  emocí a silných momentů. Baví mě zachycovat atmosféru krojů, tance,
-  hudby i radosti lidí, kteří tuto tradici udržují při životě.
-
-  Fotografováním hodů se snažím uchovat jejich jedinečný charakter a
-  přirozenou energii tak, aby fotografie vyprávěly příběh i dlouho
-  po skončení samotné akce.
-`;
+import { useTranslation } from "react-i18next";
 
 const Hody = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useTranslation();
 
   const item = {
     hidden: { opacity: 0, y: 24 },
@@ -37,7 +29,7 @@ const Hody = () => {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="text-2xl md:text-3xl font-lexendMega font-semibold"
           >
-            Moravské hody
+            {t('hody.title')}
           </motion.h2>
 
           {/* text */}
@@ -48,7 +40,7 @@ const Hody = () => {
             transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
             className="text-sm md:text-base text-[#838383] leading-relaxed"
           >
-            {text}
+            {t('hody.text')}
           </motion.p>
 
           {/* tlacitko */}
@@ -62,7 +54,7 @@ const Hody = () => {
               to="/gallery#gallery"
               className="max-sm:text-sm py-2 px-6 inline-block rounded-full bg-white text-black hover:scale-105 transition-transform duration-300 cursor-pointer"
             >
-              Zobrazit v galerii
+              {t('hody.btn')}
             </HashLink>
           </motion.div>
         </div>

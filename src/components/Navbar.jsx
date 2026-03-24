@@ -3,9 +3,15 @@ import { FaBars, FaInstagram, FaXmark } from "react-icons/fa6";
 import navBG from "../assets/nav-bg.svg";
 import { useState } from "react";
 import { Link } from "react-router";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const { t, i18n } = useTranslation();
+
+  const toggleLanguage = () => {
+    i18n.changeLanguage(i18n.language === "cs" ? "en" : "cs");
+  };
 
   const closeMenu = () => setOpen(false);
 
@@ -17,7 +23,7 @@ const Navbar = () => {
         onClick={closeMenu}
         className="hover:underline underline-offset-3 max-[1150px]:w-full"
       >
-        home
+        {t('nav.home')}
       </Link>
 
       <HashLink
@@ -26,7 +32,7 @@ const Navbar = () => {
         onClick={closeMenu}
         className="hover:underline underline-offset-3 max-[1150px]:w-full"
       >
-        služby
+        {t('nav.sluzby')}
       </HashLink>
 
       <Link
@@ -34,7 +40,7 @@ const Navbar = () => {
         onClick={closeMenu}
         className="hover:underline underline-offset-3 max-[1150px]:w-full"
       >
-        galerie
+        {t('nav.galerie')}
       </Link>
 
       <HashLink
@@ -43,7 +49,7 @@ const Navbar = () => {
         onClick={closeMenu}
         className="hover:underline underline-offset-3 max-[1150px]:w-full"
       >
-        o mně
+        {t('nav.omne')}
       </HashLink>
 
       <HashLink
@@ -52,8 +58,15 @@ const Navbar = () => {
         onClick={closeMenu}
         className="hover:underline underline-offset-3 max-[1150px]:w-full"
       >
-        kontakt
+        {t('nav.kontakt')}
       </HashLink>
+
+      <button
+        onClick={toggleLanguage}
+        className="font-bold hover:scale-110 transition-transform cursor-pointer bg-white/10 px-2 py-1 rounded-md text-sm"
+      >
+        {i18n.language === "cs" ? "EN" : "CS"}
+      </button>
 
       <a
         href="https://www.instagram.com/vahyn_/"
@@ -81,12 +94,12 @@ const Navbar = () => {
             to="/"
             className="cursor-pointer max-md:text-xs pl-2 border-l-2 mb-1 flex flex-col justify-center font-lexendMega text-sm font-medium items-start"
           >
-            <h1>Fotograf</h1>
-            <h2>Vojtěch Vahala</h2>
+            <h1>{t('nav.fotograf')}</h1>
+            <h2>{t('nav.jmeno')}</h2>
           </Link>
 
           {/* desktop navigace */}
-          <div className="max-[1150px]:hidden flex justify-center mb-1 items-center gap-8 text-white">
+          <div className="max-[1150px]:hidden flex justify-center mb-1 items-center gap-6 text-white text-[15px]">
             {renderLinks()}
           </div>
 
