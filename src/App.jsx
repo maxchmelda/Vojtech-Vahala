@@ -12,7 +12,7 @@ const App = () => {
             name: "Vojtěch Vahala – Fotograf",
             image: `${import.meta.env.VITE_SITE_URL}/og-image.jpg`,
             url: import.meta.env.VITE_SITE_URL,
-            telephone: "+420123456789", // TODO: doplnit realne cislo
+            telephone: "+420734597119", // TODO: doplnit realne cislo
             address: {
               "@type": "PostalAddress",
               addressLocality: "Brno",
