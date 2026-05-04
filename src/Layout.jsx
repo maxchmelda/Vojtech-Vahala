@@ -6,7 +6,6 @@ import { Outlet } from "react-router";
 
 export default function Layout() {
   const [showLoader, setShowLoader] = useState(true);
-  const [pageReady, setPageReady] = useState(false);
 
   useEffect(() => {
     // minimalni doba zobrazeni loaderu
@@ -23,15 +22,11 @@ export default function Layout() {
     };
 
     if (document.readyState === "complete") {
-      setPageReady(true);
       finish();
-    } else {
-      window.addEventListener("load", () => {
-        setPageReady(true);
-        finish();
-      });
+      return;
     }
 
+    window.addEventListener("load", finish);
     return () => window.removeEventListener("load", finish);
   }, []);
 

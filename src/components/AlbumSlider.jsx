@@ -100,7 +100,7 @@ export default function AlbumSlider() {
     instanceRef.current.update();
     instanceRef.current.moveToIdx(0);
     setCurrentSlide(0);
-  }, [pages.length]);
+  }, [pages.length, instanceRef]);
 
   return (
     <>

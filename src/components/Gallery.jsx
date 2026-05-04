@@ -13,7 +13,6 @@ export default function Gallery() {
   const { width } = useWindowSize();
 
   const [imageUrls, setImageUrls] = useState([]);
-  const [currentSlide, setCurrentSlide] = useState(0);
   const [sliderLoaded, setSliderLoaded] = useState(false);
   const [error, setError] = useState(false);
 
@@ -25,9 +24,6 @@ export default function Gallery() {
     loop: true,
     created() {
       setSliderLoaded(true);
-    },
-    slideChanged(slider) {
-      setCurrentSlide(slider.track.details.rel);
     },
   });
 
@@ -52,7 +48,7 @@ export default function Gallery() {
     if (instanceRef.current) {
       instanceRef.current.update();
     }
-  }, [imageUrls, width]);
+  }, [imageUrls, width, instanceRef]);
 
   return (
     <div className="navigation-wrapper">
@@ -99,10 +95,7 @@ export default function Gallery() {
       )}
 
       {/* navigacni sipky */}
-      {!error &&
-        sliderLoaded &&
-        instanceRef.current?.track?.details?.slides &&
-        imageUrls.length > 0 && (
+      {!error && sliderLoaded && imageUrls.length > 0 && (
           <>
             <img
               src={Left}
