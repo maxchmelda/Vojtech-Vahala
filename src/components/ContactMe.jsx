@@ -139,7 +139,7 @@ const ContactMe = () => {
 
           <div className="flex items-center mt-4">
             <a
-              href="https://www.instagram.com/vahyn_/"
+              href="https://www.instagram.com/vahyn_with_sony/"
               target="_blank"
               rel="noreferrer"
             >

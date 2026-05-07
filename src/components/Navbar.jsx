@@ -69,7 +69,7 @@ const Navbar = () => {
       </button>
 
       <a
-        href="https://www.instagram.com/vahyn_/"
+        href="https://www.instagram.com/vahyn_with_sony/"
         target="_blank"
         className="hover:scale-110 transition-transform"
         onClick={closeMenu}
